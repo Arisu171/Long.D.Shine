@@ -118,6 +118,7 @@ body {
     list-style-type: none;
     background-blend-mode: overlay;
     background-color: rgba(20, 20, 20, 0.74);
+    backdrop-filter: blur(3px);
     position: sticky;
     top: 0;
 }
