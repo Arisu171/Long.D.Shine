@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(20, 20, 20);
     color: aliceblue;
@@ -105,20 +109,21 @@ body {
 }
 
 .head-bar {
-    width: fit-content;
+    display: flex;
+    width: 98%;
     margin: auto;
     margin-top: 10px;
     padding: 0;
     overflow: hidden;
     list-style-type: none;
     background-blend-mode: overlay;
-    background-color: rgba(20, 20, 20, 0.459);
+    background-color: rgba(20, 20, 20, 0.74);
     position: sticky;
     top: 0;
 }
 
 .list-block {
-    float: left;
+    margin: auto;
 }
 
 .block {
