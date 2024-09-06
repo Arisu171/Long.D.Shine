@@ -65,32 +65,70 @@ body {
 }
 
 .img {
-    margin-left: 50px;
-    width: 35vw;
-    height: 35vw;
-    margin-top: calc(10% - 50px);
+    padding: 0px;
+    margin: 10% 5% 20% 5%;
+}
+
+.img img {
+    width: 30vw;
+    height: 40vw;
+    max-width: 330px;
+    max-height: 440px;
+    border: 4px solid rgba(75, 0, 105, 0.192);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(122, 0, 170, 0.5);
+    transition: 0.5s;
+}
+
+.img :hover {
+    transform: skew(-10deg, 0deg);
+    opacity: 90%;
+    height: 40vw;
+}
+
+@media (max-width: 900px) {
+    .img {
+        display: none;
+    }
+
+    .name {
+        font-size: calc(52px + 2%);
+    }
+
+    .career {
+        font-size: calc();
+    }
+}
+
+@media (min-width: 1200px) {
+    .img {
+        margin-left: 13%;
+    }
 }
 
 .inf {
     display: flex;
+    transition: 0.5s;
 }
 
 .text {
-    margin: 10% 0% 0% 10%;
-    width: 40%;
+    margin: 8% 0% 0% 10%;
+    width: 70%;
+    max-width: 800px;
+    min-width: 400px;
+
 }
 
 .name {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     color: #e1dbff;
     margin-bottom: 25px;
-    ;
 }
 
 .career {
     line-height: 1.3;
-    font-size: 65px;
+    font-size: 85px;
     font-weight: bolder;
     background: linear-gradient(to right, #6200ff, #ffffff);
     /* Màu gradient từ trái sang phải */
@@ -101,7 +139,7 @@ body {
 }
 
 .bio {
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 20px;
     color: #dfcbff;
 }
@@ -115,4 +153,10 @@ body {
 a img {
     width: 50px;
     margin: 15px;
+    transition: 0.5s;
+}
+
+a :hover {
+    width: 60px;
+    margin: 10px;
 }
