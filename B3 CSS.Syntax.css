@@ -1,15 +1,19 @@
 body {
-    background-color: rgb(236, 236, 236);
+    margin: 0px;
+    background-color: rgb(250, 250, 250);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    caret-color: transparent;
 }
 
 .region {
     background-color: white;
-    width: 95%;
-    max-width: 800px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 99%;
+    max-width: 1200px;
     border: 1px solid rgb(204, 204, 204);
-    margin: auto;
+    margin-top: 40px;
     padding: 50px;
+    margin-left: 300px;
 }
 
 .h1 {
@@ -22,7 +26,7 @@ body {
     margin-bottom: 20px;
     display: flex;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     justify-content: space-between;
     cursor: pointer;
@@ -150,4 +154,165 @@ a img {
     padding-bottom: 50px;
     border-bottom: 1px solid rgb(221, 221, 221);
     margin-bottom: 20px;
+}
+
+.menu {
+    z-index: 0;
+    top: 105px;
+    background-color: rgb(226, 231, 233);
+    width: 300px;
+    height: calc(100vh - 100px);
+    overflow: auto;
+    position: fixed;
+    box-shadow: 0 10px 0;
+}
+
+.ul {
+    font-size: 30px;
+    margin-left: -30px;
+    padding-left: 45px;
+}
+
+.list {
+    cursor: pointer;
+    padding: 3px 0px 3px 25px;
+    list-style-type: none;
+    margin: 0px 0px 0px -10px;
+    align-items: center;
+}
+
+.ul :hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.ul :active {
+    background-color: rgb(57, 199, 140);
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+
+    .region {
+        margin-left: 0px;
+    }
+}
+
+.header {
+    cursor: pointer;
+    width: 100vw;
+    position: fixed;
+    margin: 0px;
+}
+
+.header ul {
+    list-style-type: none;
+}
+
+.item {
+    padding: 14px 16px;
+}
+
+.item img {
+    height: 60px;
+}
+
+.htop {
+    padding: 10px 0px 12px 0px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 0px -2px;
+    height: 70px;
+}
+
+.hleft {
+    font-size: 15px;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.hove {
+    display: flex;
+    margin-left: -40px;
+}
+
+.hove :hover {
+    background-color: rgb(23, 168, 113);
+    color: white;
+}
+
+#search {
+    cursor: text;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    justify-content: space-between;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 50px;
+    padding: 3px 15px 3px 20px;
+    color: rgb(134, 134, 134);
+    font-style: italic;
+}
+
+.hright {
+    display: flex;
+    align-items: center;
+    margin: 3px;
+    margin-right: 40px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.hright :hover {
+    background-color: rgb(103, 196, 145);
+}
+
+.hright li {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    height: 46px;
+    font-size: 15px;
+}
+
+#li {
+    background-color: rgb(217, 238, 225);
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-left: -45px;
+    border-radius: 50px;
+    z-index: 0;
+}
+
+#su {
+    color: white;
+    background-color: rgb(23, 168, 113);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.hbot {
+    z-index: 1;
+    background-color: rgb(32, 32, 32);
+    margin: 0px 0px 0px -60px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    color: white;
+}
+
+.hbot li {
+    width: max-content;
+    padding: 5px 14px;
+    font-size: 15px;
+}
+
+.hbot :hover {
+    background-color: black;
 }
