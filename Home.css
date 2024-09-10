@@ -131,11 +131,8 @@ body {
     font-size: 85px;
     font-weight: bolder;
     background: linear-gradient(to right, #6200ff, #ffffff);
-    /* Màu gradient từ trái sang phải */
     -webkit-background-clip: text;
-    /* Cắt background vào phần chữ */
     -webkit-text-fill-color: transparent;
-    /* Đặt màu chữ trong suốt để chỉ thấy gradient */
 }
 
 .bio {
@@ -153,7 +150,7 @@ body {
 a img {
     width: 50px;
     margin: 15px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 a :hover {
