@@ -38,13 +38,13 @@ body {
 }
 
 .nav-item {
-    margin: 0px;
+    margin: 0px 10px;
 }
 
 .nav-item a {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    color: rgb(185, 132, 255);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 8px 14px;
     transition: background-color 0.3s ease;
@@ -153,7 +153,37 @@ a img {
     transition: 0.2s;
 }
 
+a :active {
+    filter: blur(2px)
+}
+
 a :hover {
     width: 60px;
     margin: 10px;
+}
+
+.linkto a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    background: linear-gradient(to right, #6200ff, #a934ec);
+    border-radius: 50px;
+    margin: 30px 40px;
+    padding: 15px 40px;
+    transition: 0.1s;
+}
+
+.linkto :hover {
+    background: linear-gradient(to right, #6200ff, #a934ec);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 30px 37px;
+    border: 3px solid rgb(132, 0, 255);
+}
+
+.linkto :active {
+    text-shadow: 0 0 5px #e100ff, 0 0 5px #e100ff, 0 0 5px #e100ff;
+    border-color: rgb(89, 0, 255);
 }
