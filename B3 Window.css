@@ -4,7 +4,8 @@ body {
     max-width: 1000px;
     margin: auto;
     background-color: rgb(231, 231, 231);
-
+    scroll-behavior: smooth;
+    caret-color: transparent;
 }
 
 header {
