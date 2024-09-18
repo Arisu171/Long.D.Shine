@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
     caret-color: transparent;
     cursor: default;
-
+    /* transition: all 0.5s; */
 }
 
 body {
@@ -49,11 +49,12 @@ body {
     padding: 8px 14px;
     transition: background-color 0.3s ease;
     border-radius: 15px;
+    transition: all 0.5s;
 }
 
 .nav-item a:hover {
     background-color: #00000027;
-    color: rgb(0, 225, 255);
+    color: rgb(204, 164, 255);
 }
 
 .nav-item a:active {
@@ -85,31 +86,10 @@ body {
     transform: skew(-10deg, 0deg);
     scale: 1.1;
     opacity: 90%;
-    height: 40vw;
     rotate: 5deg;
     box-shadow: 15px 15px 30px rgba(210, 97, 255, 0.767);
     border-right: 7px solid rgba(75, 0, 105, 0.192);
     border-bottom: 7px solid rgba(75, 0, 105, 0.192);
-}
-
-@media (max-width: 900px) {
-    .img {
-        display: none;
-    }
-
-    .name {
-        font-size: calc(52px + 2%);
-    }
-
-    .career {
-        font-size: calc();
-    }
-}
-
-@media (min-width: 1200px) {
-    .img {
-        margin-left: 13%;
-    }
 }
 
 .inf {
@@ -122,11 +102,10 @@ body {
     width: 70%;
     max-width: 800px;
     min-width: 400px;
-
 }
 
 .name {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
     color: #e1dbff;
     margin-bottom: 25px;
@@ -134,7 +113,7 @@ body {
 
 .career {
     line-height: 1.3;
-    font-size: 85px;
+    font-size: 70px;
     font-weight: bolder;
     background: linear-gradient(to right, #6200ff, #ffffff);
     -webkit-background-clip: text;
@@ -142,6 +121,7 @@ body {
 }
 
 .bio {
+    width: 95%;
     margin-top: 50px;
     font-size: 20px;
     color: #dfcbff;
@@ -153,19 +133,18 @@ body {
     margin: 30px;
 }
 
-a img {
+.icon a img {
     width: 50px;
     margin: 15px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
-a :active {
+.icon a :active {
     filter: blur(2px)
 }
 
-a :hover {
-    width: 60px;
-    margin: 10px;
+.icon a :hover {
+    scale: 120%;
 }
 
 .linkto a {
@@ -192,4 +171,41 @@ a :hover {
 .linkto :active {
     text-shadow: 0 0 5px #e100ff, 0 0 5px #e100ff, 0 0 5px #e100ff;
     border-color: rgb(89, 0, 255);
+}
+
+@media (max-width: 900px) {
+    .img {
+        display: none;
+    }
+
+    .name {
+        font-size: calc(50px + 1vw);
+    }
+
+    .career {
+        font-size: calc(65px + 1vw);
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-item a {
+        font-size: 16px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .img {
+        margin-left: 13%;
+    }
+
+    .name {
+        font-size: 70px;
+    }
+
+    .career {
+        font-size: 85px;
+    }
 }
