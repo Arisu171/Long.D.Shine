@@ -43,6 +43,10 @@ body {
     color: rgb(0, 112, 112);
 }
 
+.right .icon {
+    font-size: 25px;
+}
+
 .text input {
     border: none;
     outline: none;
