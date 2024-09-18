@@ -75,6 +75,7 @@ body {
 }
 
 .nav-item a:hover {
+    text-shadow: 0 0 3px #ae00ff, 0 0 3px #00c3ff, 0 0 3px #fad7ff;
     background-color: #00000027;
     color: rgb(204, 164, 255);
 }
