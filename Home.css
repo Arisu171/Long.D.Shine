@@ -7,6 +7,18 @@ html {
     /* transition: all 0.5s; */
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+    /* Tắt hiệu ứng highlight */
+}
+
+::selection {
+    background: transparent;
+    /* Bỏ màu nền khi bôi đen */
+    color: inherit;
+    /* Giữ màu chữ nguyên bản */
+}
+
 body {
     margin: 0px;
 }
