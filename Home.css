@@ -4,19 +4,15 @@ html {
     scroll-behavior: smooth;
     caret-color: transparent;
     cursor: default;
-    /* transition: all 0.5s; */
 }
 
 * {
     -webkit-tap-highlight-color: transparent;
-    /* Tắt hiệu ứng highlight */
 }
 
 ::selection {
     background: transparent;
-    /* Bỏ màu nền khi bôi đen */
     color: inherit;
-    /* Giữ màu chữ nguyên bản */
 }
 
 body {
@@ -33,7 +29,7 @@ body {
     backdrop-filter: blur(30px);
     background-blend-mode: overlay;
     overflow: hidden;
-    transition: opacity 0.3s;
+    transition: background-color linear 0.5s, height linear 0.5s;
 }
 
 .navbar {
@@ -57,7 +53,7 @@ body {
     display: flex;
     margin: 10px 15px 0px 10px;
     align-items: center;
-    transition: 0.5s;
+    transition: linear 0.3s;
 }
 
 .nav-item {
@@ -72,9 +68,9 @@ body {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 8px 14px;
-    transition: background-color 0.3s ease;
+    transition: background-color linear 0.3s;
     border-radius: 15px;
-    transition: all 0.5s;
+    transition: all linear 0.5s;
     align-items: center;
 }
 
@@ -121,7 +117,7 @@ body {
     color: rgba(208, 150, 255, 0.767);
     opacity: 0;
     margin-top: -90px;
-    transition: 0.5s;
+    transition: linear 0.5s;
 }
 
 .nav-small a {
@@ -147,6 +143,7 @@ body {
 .img {
     padding: 0px;
     margin: 10% 5% 20% 5%;
+    transition: linear 0.3s;
 }
 
 .img img {
@@ -157,7 +154,6 @@ body {
     border: 4px solid rgba(75, 0, 105, 0.192);
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgba(122, 0, 170, 0.5);
-    transition: 0.5s;
 }
 
 .img :hover {
@@ -267,7 +263,9 @@ body {
 
 @media (max-width: 900px) {
     .img {
-        display: none;
+        margin-right: -100px;
+        scale: 0.7;
+        opacity: 0;
     }
 
     .name {
@@ -304,7 +302,7 @@ body {
     }
 
     .nav-right {
-        margin-right: -500vw;
+        margin-right: -300px;
         opacity: 0;
     }
 
