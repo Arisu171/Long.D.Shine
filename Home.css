@@ -17,6 +17,7 @@ html {
 
 body {
     margin: 0px;
+    width: 100%;
 }
 
 .bar {
@@ -50,10 +51,15 @@ body {
     padding: 0px;
     height: 60px;
     list-style-type: none;
+    position: fixed;
     display: flex;
     margin: 10px 15px 0px 10px;
     align-items: center;
     transition: 0.3s ease;
+}
+
+.nav-right {
+    right: 10px;
 }
 
 .nav-item {
@@ -156,6 +162,7 @@ body {
     padding: 0px;
     margin: 10% 5% 20% 5%;
     transition: 0.3s ease;
+    transition-delay: 1s;
 }
 
 .img img {
@@ -189,6 +196,10 @@ body {
     width: 70%;
     max-width: 800px;
     min-width: 400px;
+}
+
+.text div {
+    transition: 0.5s;
 }
 
 .name:hover {
@@ -304,10 +315,15 @@ body {
 }
 
 @media (max-width: 900px) {
-    .img {
-        margin: 10% 0% 20% -15%;
-        transform: translateX(+300px);
+    .img img {
+        transform: translateX(+200px);
         opacity: 0;
+    }
+
+    .img {
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .text {
