@@ -48,6 +48,7 @@
         .black {
             width: 300px;
             height: 300px;
+            transition: 0.6s ease;
         }
 
         .list {
@@ -81,6 +82,7 @@
             left: 95px;
             position: absolute;
             opacity: 0;
+            transition-delay: 0.3s;
             transition: 0.4s ease;
         }
 
@@ -95,7 +97,7 @@
             left: 0px;
             background-color: rgba(0, 0, 0, 0.342);
             opacity: 0;
-            transition: 0.4s;
+            transition: 0.4s ease;
         }
 
         .cap {
@@ -114,6 +116,10 @@
             margin-left: 5px;
             transition: 0.4s ease;
             cursor: pointer;
+        }
+
+        .list:hover img {
+            scale: 1.15;
         }
 
         .list:hover .black {
