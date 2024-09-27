@@ -28,6 +28,10 @@
             z-index: 10;
         }
 
+        .left img {
+            height: 30px;
+        }
+
         .right {
             display: flex;
             cursor: pointer;
@@ -178,7 +182,7 @@
             text-align: center;
             left: calc(50vw - 74px);
             bottom: 10vw;
-            transition: 0.5s;
+            transition: background-color 0.5s;
             cursor: pointer;
         }
 
@@ -300,12 +304,26 @@
             left: 0%;
             width: 100%;
         }
+
+        @media (max-width: 960px) {
+            .text {
+                left: calc(50vw - 300px);
+                bottom: 40%;
+                width: 600px;
+                font-size: 45px;
+            }
+
+            .button {
+                bottom: 15%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="nav">
-        <div class="left">Kalium</div>
+        <div class="left"><img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/10/fashion_logo.png"
+                alt=""></div>
         <div class="right">
             <div class="ul1">
                 <div class="ulc" id="home">Home</div>
@@ -357,7 +375,6 @@
         <img src="Kalium-char.png" alt="" class="char">
         <img src="Kalium-back.jpg" alt="" class="back">
         <div class="text">Monochrome Collection</div>
-        <div class="text"></div>
         <div class="button">SHOP NOW</div>
     </div>
     <div class="title">
