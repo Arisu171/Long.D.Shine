@@ -12,3 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+let chieuCaoToanBo = window.screen.height;
+console.log("Chiều cao toàn bộ màn hình: " + chieuCaoToanBo + "px");

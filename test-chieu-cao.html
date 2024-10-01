@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến CSS từ kích thước màn hình thiết bị</title>
+    <style>
+        :root {
+            --chieu-rong-thiet-bi: 100vw;
+            /* Giá trị mặc định */
+            --chieu-cao-thiet-bi: 100vh;
+            /* Giá trị mặc định */
+        }
+
+        .element {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--chieu-rong-thiet-bi);
+            height: var(--chieu-cao-thiet-bi);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="element">
+        <h1>Kích thước màn hình thiết bị</h1>
+    </div>
+
+    <script>
+        // Lấy kích thước màn hình thiết bị
+        let chieuRong = window.screen.width;
+        let chieuCao = window.screen.height;
+
+        // Gán giá trị cho custom properties trong CSS
+        document.documentElement.style.setProperty('--chieu-rong-thiet-bi', chieuRong + 'px');
+        document.documentElement.style.setProperty('--chieu-cao-thiet-bi', chieuCao + 'px');
+
+        // Cập nhật hiển thị trên trang
+        document.querySelector('.element h1').innerText = `Chiều rộng: ${chieuRong}px, Chiều cao: ${chieuCao}px`;
+    </script>
+
+</body>
+
+</html>

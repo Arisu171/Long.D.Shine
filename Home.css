@@ -10,6 +10,14 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
+:root {
+    --Wid: 100vw;
+    /* Giá trị mặc định */
+    --Hig: 100vh;
+    /* Giá trị mặc định */
+    --pix: calc(var(--pix) * 1);
+}
+
 ::selection {
     background: transparent;
     color: inherit;
@@ -17,17 +25,19 @@ html {
 
 body {
     margin: 0px;
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .bar {
     z-index: 100;
     position: fixed;
-    margin: 0px -25vw;
-    width: 150vw;
-    height: 80px;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: calc(var(--pix) * 80);
     background-color: rgba(0, 0, 0, 0.336);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(1.6vw);
     background-blend-mode: overlay;
     overflow: hidden;
     transition: background-color linear 0.5s, height linear 0.5s;
@@ -41,25 +51,25 @@ body {
     z-index: 101;
     display: flex;
     justify-content: space-between;
-    height: 80px;
-    padding: 0px calc(0.5vw);
+    height: calc(var(--pix) * 80);
+    padding: 0px;
     list-style-type: none;
 }
 
 .nav-left,
 .nav-right {
-    padding: 0px;
-    height: 60px;
+    padding: 0px 0px 0px calc(var(--pix) * 5);
+    height: calc(var(--pix) * 60);
     list-style-type: none;
     position: fixed;
     display: flex;
-    margin: 10px 15px 0px 10px;
+    margin: calc(var(--pix) * 10) calc(var(--pix) * 15) 0px calc(var(--pix) * 10);
     align-items: center;
     transition: 0.3s ease;
 }
 
 .nav-right {
-    right: 10px;
+    right: calc(var(--pix) * 10);
 }
 
 .nav-item {
@@ -69,19 +79,19 @@ body {
 }
 
 .nav-item a {
-    font-size: 20px;
+    font-size: calc(var(--pix) * 20);
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 8px 14px;
+    padding: calc(var(--pix) * 8) calc(var(--pix) * 14);
     transition: background-color linear 0.3s;
-    border-radius: 15px;
+    border-radius: calc(var(--pix) * 15);
     transition: all linear 0.5s;
     align-items: center;
 }
 
 .nav-item a:hover {
-    text-shadow: 0 0 3px #ae00ff, 0 0 3px #00c3ff, 0 0 3px #fad7ff;
+    text-shadow: 0 0 calc(var(--pix) * 3) #ae00ff, 0 0 calc(var(--pix) * 3) #00c3ff, 0 0 calc(var(--pix) * 3) #fad7ff;
     background-color: #00000027;
     color: rgb(204, 164, 255);
 }
@@ -91,17 +101,17 @@ body {
 }
 
 .nav-small {
-    width: 30px;
-    height: 30px;
+    width: calc(var(--pix) * 30);
+    height: calc(var(--pix) * 30);
     padding-left: 0px;
-    right: 20px;
-    top: -30px;
+    right: calc(var(--pix) * 20);
+    top: calc(var(--pix) * -30);
     transition: 0.5s;
     z-index: 103;
-    font-size: 25px;
+    font-size: calc(var(--pix) * 25);
     opacity: 0;
     color: rgba(255, 255, 255, 0.767);
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--pix) * 20);
     position: fixed;
     background-blend-mode: overlay;
     list-style-type: none;
@@ -110,28 +120,28 @@ body {
 }
 
 .nav-small i {
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--pix) * 20);
 }
 
 #nav-icon-1 {
     z-index: 104;
-    right: 4px;
+    right: calc(var(--pix) * 4);
     position: fixed;
 }
 
 .nav-small i:hover {
-    text-shadow: 0 0 5px #ae00ff, 0 0 5px #00c3ff, 0 0 5px #e100ff;
+    text-shadow: 0 0 calc(var(--pix) * 5) #ae00ff, 0 0 calc(var(--pix) * 5) #00c3ff, 0 0 calc(var(--pix) * 5) #e100ff;
 }
 
 .nav-small .hide {
     z-index: 102;
-    color: rgba(208, 150, 255, 0.767);
+    color: rgb(231, 216, 255);
     opacity: 0;
     transition: 0.5s ease;
 }
 
 .nav-small a {
-    color: rgba(208, 150, 255, 0.767);
+    color: rgb(217, 170, 255);
 }
 
 .nav-small :hover {
@@ -144,18 +154,18 @@ body {
 }
 
 .avt {
-    margin: 5px 10px 0px 0px;
+    margin: calc(var(--pix) * 5) calc(var(--pix) * 10) 0px 0px;
     background: linear-gradient(45deg, #6200ff, #f7d7ff);
-    padding: 2px;
+    padding: calc(var(--pix) * 2);
     border-radius: 50%;
     position: relative;
-    height: 50px;
-    box-shadow: 0 0 6px 4px rgba(133, 81, 255, 0.6), 0 0 4px 6px rgba(241, 90, 255, 0.3);
+    height: calc(var(--pix) * 50);
+    box-shadow: 0 0 calc(var(--pix) * 6) calc(var(--pix) * 4) rgba(133, 81, 255, 0.6), 0 0 calc(var(--pix) * 4) calc(var(--pix) * 6) rgba(241, 90, 255, 0.3);
 }
 
 .avt:hover {
     background: linear-gradient(45deg, rgb(133, 81, 255), rgb(241, 90, 255));
-    box-shadow: 0 0 6px 4px rgba(255, 52, 164, 0.6), 0 0 4px 6px rgba(93, 90, 255, 0.3);
+    box-shadow: 0 0 calc(var(--pix) * 6) calc(var(--pix) * 4) rgba(255, 52, 164, 0.6), 0 0 calc(var(--pix) * 4) calc(var(--pix) * 6) rgba(93, 90, 255, 0.3);
 }
 
 .img {
@@ -170,9 +180,9 @@ body {
     height: 40vw;
     max-width: 330px;
     max-height: 440px;
-    border: 4px solid rgba(75, 0, 105, 0.192);
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px rgba(122, 0, 170, 0.5);
+    border: calc(var(--pix) * 4) solid rgba(75, 0, 105, 0.192);
+    border-radius: calc(var(--pix) * 15);
+    box-shadow: calc(var(--pix) * 10) calc(var(--pix) * 10) calc(var(--pix) * 20) rgba(122, 0, 170, 0.5);
     transition: 0.3s ease;
 }
 
@@ -181,9 +191,9 @@ body {
     scale: 1.1;
     opacity: 90%;
     rotate: 5deg;
-    box-shadow: 15px 15px 30px rgba(210, 97, 255, 0.767);
-    border-right: 7px solid rgba(75, 0, 105, 0.192);
-    border-bottom: 7px solid rgba(75, 0, 105, 0.192);
+    box-shadow: calc(var(--pix) * 15) calc(var(--pix) * 15) calc(var(--pix) * 30) rgba(210, 97, 255, 0.767);
+    border-right: calc(var(--pix) * 7) solid rgba(75, 0, 105, 0.192);
+    border-bottom: calc(var(--pix) * 7) solid rgba(75, 0, 105, 0.192);
 }
 
 .inf {
@@ -203,21 +213,21 @@ body {
 }
 
 .name:hover {
-    text-shadow: 0 0 5px #ae00ff, 0 0 5px #00c3ff, 0 0 5px #e100ff;
+    text-shadow: 0 0 calc(var(--pix) * 5) #ae00ff, 0 0 calc(var(--pix) * 5) #00c3ff, 0 0 calc(var(--pix) * 5) #e100ff;
 }
 
 .text a:hover {}
 
 .name {
-    font-size: 60px;
+    font-size: calc(var(--pix) * 60);
     font-weight: bold;
     color: #e1dbff;
-    margin-bottom: 25px;
+    margin-bottom: calc(var(--pix) * 25);
 }
 
 .career {
     line-height: 1.3;
-    font-size: 70px;
+    font-size: calc(var(--pix) * 70);
     font-weight: bolder;
     background: linear-gradient(to right, #6200ff, #ffffff);
     -webkit-background-clip: text;
@@ -226,20 +236,20 @@ body {
 
 .bio {
     width: 95%;
-    margin-top: 50px;
-    font-size: 20px;
+    margin-top: calc(var(--pix) * 50);
+    font-size: calc(var(--pix) * 20);
     color: #dfcbff;
 }
 
 .icon {
     display: flex;
     align-items: center;
-    margin: 30px;
+    margin: calc(var(--pix) * 30);
 }
 
 .icon a img {
-    width: 50px;
-    margin: 15px;
+    width: calc(var(--pix) * 50);
+    margin: calc(var(--pix) * 15);
     transition: 0.5s;
 }
 
@@ -254,12 +264,12 @@ body {
 .linkto a {
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: calc(var(--pix) * 25);
     font-weight: bolder;
     background: linear-gradient(to right, #6200ff, #a934ec);
-    border-radius: 50px;
-    margin: 30px 40px;
-    padding: 15px 40px;
+    border-radius: calc(var(--pix) * 50);
+    margin: calc(var(--pix) * 30) calc(var(--pix) * 40);
+    padding: calc(var(--pix) * 15) calc(var(--pix) * 40);
     transition: 0.1s;
 }
 
@@ -268,14 +278,14 @@ body {
     font-weight: bold;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 30px 37px;
-    border: 3px solid rgb(132, 0, 255);
-    box-shadow: 0 0 3px 2px rgba(133, 81, 255, 0.6), 0 0 2px 3px rgba(241, 90, 255, 0.3);
+    margin: calc(var(--pix) * 30) 37px;
+    border: calc(var(--pix) * 3) solid rgb(132, 0, 255);
+    box-shadow: 0 0 calc(var(--pix) * 3) calc(var(--pix) * 2) rgba(133, 81, 255, 0.6), 0 0 calc(var(--pix) * 2) calc(var(--pix) * 3) rgba(241, 90, 255, 0.3);
 }
 
 .linkto :active {
-    text-shadow: 0 0 5px #e100ff, 0 0 5px #e100ff, 0 0 5px #e100ff;
-    box-shadow: 0 0 3px 2px rgba(255, 52, 164, 0.6), 0 0 2px 3px rgba(93, 90, 255, 0.3);
+    text-shadow: 0 0 calc(var(--pix) * 5) #e100ff, 0 0 calc(var(--pix) * 5) #e100ff, 0 0 calc(var(--pix) * 5) #e100ff;
+    box-shadow: 0 0 calc(var(--pix) * 3) calc(var(--pix) * 2) rgba(255, 52, 164, 0.6), 0 0 calc(var(--pix) * 2) calc(var(--pix) * 3) rgba(93, 90, 255, 0.3);
     border-color: rgb(89, 0, 255);
 }
 
@@ -305,7 +315,7 @@ body {
     }
 
     .name {
-        font-size: 70px;
+        font-size: calc(var(--pix) * 70);
     }
 
     .career {
@@ -340,7 +350,7 @@ body {
 
 @media (max-width: 768px) {
     .bar {
-        height: 60px;
+        height: calc(var(--pix) * 60);
         background-color: rgba(0, 0, 0, 0);
         backdrop-filter: blur(30px);
         background-blend-mode: overlay;
@@ -348,17 +358,17 @@ body {
     }
 
     .navbar {
-        height: 60px;
+        height: calc(var(--pix) * 60);
         padding: 0px calc(0.5vw);
         list-style-type: none;
     }
 
     .nav-left {
         padding: 0px;
-        height: 40px;
+        height: calc(var(--pix) * 40);
         list-style-type: none;
         display: flex;
-        margin: 10px 15px 0px 10px;
+        margin: calc(var(--pix) * 10) calc(var(--pix) * 15) 0px calc(var(--pix) * 10);
         align-items: center;
     }
 
@@ -375,12 +385,12 @@ body {
     }
 
     .nav-item a {
-        font-size: 20px;
+        font-size: calc(var(--pix) * 20);
         font-weight: bold;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        padding: 8px 14px;
-        border-radius: 15px;
+        padding: calc(var(--pix) * 8) 14px;
+        border-radius: calc(var(--pix) * 15);
         transition: all 0.5s;
         align-items: center;
     }
@@ -395,13 +405,13 @@ body {
     }
 
     .avt {
-        height: 40px;
-        box-shadow: 0 0 3px 2px rgba(133, 81, 255, 0.6), 0 0 2px 3px rgba(241, 90, 255, 0.3);
+        height: calc(var(--pix) * 40);
+        box-shadow: 0 0 calc(var(--pix) * 3) calc(var(--pix) * 2) rgba(133, 81, 255, 0.6), 0 0 calc(var(--pix) * 2) calc(var(--pix) * 3) rgba(241, 90, 255, 0.3);
     }
 
     .avt:hover {
         background: linear-gradient(45deg, rgb(133, 81, 255), rgb(241, 90, 255));
-        box-shadow: 0 0 3px 2px rgba(255, 52, 164, 0.6), 0 0 2px 3px rgba(93, 90, 255, 0.3);
+        box-shadow: 0 0 calc(var(--pix) * 3) calc(var(--pix) * 2) rgba(255, 52, 164, 0.6), 0 0 calc(var(--pix) * 2) calc(var(--pix) * 3) rgba(93, 90, 255, 0.3);
     }
 
     .nav-small {

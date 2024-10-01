@@ -1,28 +1,14 @@
-let stringBox = {
-    wTextture: 0,
-    wScene: 0,
-    hTexture: 0,
-    sScene: 0,
-    caretPosScene: []
-};
-textInpuptE1.innerHTML = string;
-textInpuptE1.focus();
+// Lấy kích thước màn hình thiết bị
+let chieuRong = window.screen.width;
+let chieuCao = window.screen.height;
+// Tính giá trị 1/1080 chiều cao
+let motPhanChieuCao = chieuCao / 1080;
 
-init();
-createEvents();
-setCaretToEndOfInput();
-handleInput();
-refreshText();
-WebGL2RenderingContext();
-function init() {
-    camera = new THREE.Perspective
-    Camera(45, window.innerWidth /
-        window.innerHeight, .1, 10000)
-    camera.position.z = 18;
+// Gán giá trị cho custom properties trong CSS
+document.documentElement.style.setProperty('--wid', chieuRong + 'px');
+document.documentElement.style.setProperty('--hig', chieuCao + 'px');
 
-    scene = new THREE.Scene();
-
-    renderer = new THREE.WebGLRenderer({
-        alpha: true
-    });
-}
+// Gán giá trị cho biến CSS --phan-chieu-cao
+document.documentElement.style.setProperty('--pix', motPhanChieuCao + 'px');
+// Cập nhật hiển thị trên trang
+document.querySelector('.element h1').innerText = `Chiều rộng: ${chieuRong}px, Chiều cao: ${chieuCao}px`;
