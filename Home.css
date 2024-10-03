@@ -23,6 +23,11 @@ html {
     color: inherit;
 }
 
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
 body {
     margin: 0px;
     width: 100vw;

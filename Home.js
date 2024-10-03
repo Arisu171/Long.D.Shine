@@ -13,3 +13,32 @@ document.documentElement.style.setProperty('--pix', motPhanChieuCao + 'px');
 document.documentElement.style.setProperty('--pot', motPhanChieuRong + 'px');
 // Cập nhật hiển thị trên trang
 document.querySelector('.element h1').innerText = `Chiều rộng: ${chieuRong}px, Chiều cao: ${chieuCao}px`;
+
+// chặn Devtool
+setInterval(function () {
+    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+        alert("Đang định làm gì với đống code của tui zạ??");
+        window.location.reload();
+    }
+}, 1000);
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'F12' ||
+        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') ||
+        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'J') ||
+        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') ||
+        ((event.ctrlKey || event.metaKey) && event.key === 'U')) {
+        event.preventDefault();
+        alert("Wellcome to Devtool Lmao");
+    }
+});
+
+document.addEventListener('copy', function (event) {
+    event.preventDefault();
+    alert("Coppy Failed Successful !!!");
+});
+
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+    alert("Rai cờ líc đít sa bờ lẹt");
+});
