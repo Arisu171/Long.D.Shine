@@ -23,7 +23,7 @@ function startGame() {
 
     document.getElementById('gameSection').style.display = 'block';
     document.getElementById('maxNumber').textContent = difficulty;
-    document.getElementById('message').textContent = 'Gacha Go';
+    document.getElementById('message').textContent = 'Welcome to hell';
 
     generateNumberOptions(difficulty);
     document.addEventListener('keydown', handleKeyPress);
@@ -55,7 +55,7 @@ function handleKeyPress(event) {
 
 function checkGuess(userGuess) {
     if (userGuess === randomNumber) {
-        document.getElementById('message').innerHTML = `<p>Siuuuuuu!!</p><p>True Answer is ${randomNumber}</p>`;
+        document.getElementById('message').innerHTML = `<p>Siuuuuuu!!</p><p>The Answer is ${randomNumber}</p>`;
         // document.getElementById('trueanswer').textContent = `True Answer is ${randomNumber}`;
         document.removeEventListener('keydown', handleKeyPress);
     } else {
