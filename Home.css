@@ -8,6 +8,19 @@ html {
 
 * {
     -webkit-tap-highlight-color: transparent;
+    /* Vô hiệu hóa chọn văn bản */
+    -webkit-touch-callout: none;
+    /* Ngăn chặn menu context trên iOS */
+    -webkit-user-select: none;
+    /* Ngăn chọn văn bản trên iOS */
+    -khtml-user-select: none;
+    /* Ngăn chọn văn bản trên Konqueror */
+    -moz-user-select: none;
+    /* Ngăn chọn văn bản trên Firefox */
+    -ms-user-select: none;
+    /* Ngăn chọn văn bản trên Internet Explorer */
+    user-select: none;
+    /* Ngăn chọn văn bản trên các trình duyệt chuẩn */
 }
 
 :root {
@@ -34,7 +47,7 @@ body {
     overflow-x: hidden;
 }
 
-.bar {
+.body-hide .bar {
     z-index: 100;
     position: fixed;
     top: 0px;
@@ -56,7 +69,8 @@ body {
     z-index: 101;
     display: flex;
     justify-content: space-between;
-    height: calc(var(--pot) * 80);
+    height: 4vw;
+    max-height: calc(var(--pot) * 80);
     padding: 0px;
     list-style-type: none;
 }
