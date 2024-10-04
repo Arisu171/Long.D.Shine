@@ -1,6 +1,7 @@
 let randomNumber = null;
 let difficultyLevel = null;
 
+// Hàm bắt đầu game khi người dùng nhấn START
 function startGame() {
     const difficulty = parseInt(document.getElementById('difficulty').value);
 
@@ -29,6 +30,27 @@ function startGame() {
     document.addEventListener('keydown', handleKeyPress);
 }
 
+// Hàm để giảm giá trị của input level khi người dùng nhấn nút "down"
+function decreaseValue() {
+    const input = document.getElementById('difficulty');
+    let currentValue = parseInt(input.value) || 0;
+
+    if (currentValue > 0) { // Không cho giảm dưới 0
+        input.value = currentValue - 1;
+    }
+}
+
+// Hàm để tăng giá trị của input level khi người dùng nhấn nút "up"
+function increaseValue() {
+    const input = document.getElementById('difficulty');
+    let currentValue = parseInt(input.value) || 0;
+
+    if (currentValue < 9) { // Không cho vượt quá 9
+        input.value = currentValue + 1;
+    }
+}
+
+// Tạo các nút lựa chọn số để người dùng có thể click chọn
 function generateNumberOptions(maxNumber) {
     const numberOptions = document.getElementById('numberOptions');
     numberOptions.innerHTML = '';
@@ -43,6 +65,7 @@ function generateNumberOptions(maxNumber) {
     }
 }
 
+// Hàm lắng nghe khi người dùng nhấn phím số trên bàn phím
 function handleKeyPress(event) {
     const userGuess = parseInt(event.key);
 
@@ -53,10 +76,10 @@ function handleKeyPress(event) {
     }
 }
 
+// Kiểm tra đáp án người dùng đã chọn
 function checkGuess(userGuess) {
     if (userGuess === randomNumber) {
         document.getElementById('message').innerHTML = `<p>Siuuuuuu!!</p><p>The Answer is ${randomNumber}</p>`;
-        // document.getElementById('trueanswer').textContent = `True Answer is ${randomNumber}`;
         document.removeEventListener('keydown', handleKeyPress);
     } else {
         randomNumber = Math.floor(Math.random() * (difficultyLevel + 1));
