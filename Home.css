@@ -191,7 +191,7 @@ body {
 .inf {
     margin-top: calc(var(--pot) * 80);
     display: grid;
-    transition: 0.5s;
+    /* transition: 0.5s; */
     grid-template-columns: repeat(2, 2fr);
 }
 

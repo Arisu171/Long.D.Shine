@@ -1,10 +1,10 @@
 // chặn Devtool
-// setInterval(function () {
-//     if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
-//         alert("Đang định làm gì với đống code của tui zạ??");
-//         window.location.reload();
-//     }
-// }, 1000);
+setInterval(function () {
+    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+        alert("Wut ảe u doing bro?");
+        window.location.reload();
+    }
+}, 1000);
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'F12' ||
