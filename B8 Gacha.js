@@ -72,7 +72,7 @@ function handleKeyPress(event) {
     if (!isNaN(userGuess) && userGuess >= 0 && userGuess <= difficultyLevel) {
         checkGuess(userGuess);
     } else {
-        document.getElementById('message').textContent = `Chọn đáp án từ 0 đến ${difficultyLevel}.`;
+        document.getElementById('message').textContent = `Chọn đáp án từ 0 đến ${difficultyLevel}`;
     }
 }
 
@@ -83,6 +83,6 @@ function checkGuess(userGuess) {
         document.removeEventListener('keydown', handleKeyPress);
     } else {
         randomNumber = Math.floor(Math.random() * (difficultyLevel + 1));
-        document.getElementById('message').textContent = `Again 0 - ${difficultyLevel}.`;
+        document.getElementById('message').textContent = `Again 0 - ${difficultyLevel}`;
     }
 }
