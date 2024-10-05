@@ -1,6 +1,9 @@
 let randomNumber = null;
 let difficultyLevel = null;
 
+const overlay = document.getElementById('overlay');
+const arlert = document.getElementById('arlert');
+
 // Hàm bắt đầu game khi người dùng nhấn START
 function startGame() {
     const difficulty = parseInt(document.getElementById('difficulty').value);
@@ -79,10 +82,19 @@ function handleKeyPress(event) {
 // Kiểm tra đáp án người dùng đã chọn
 function checkGuess(userGuess) {
     if (userGuess === randomNumber) {
-        document.getElementById('message').innerHTML = `<p>Siuuuuuu!!</p><p>The Answer is ${randomNumber}</p>`;
+        document.getElementById('message').innerHTML = `<p>Congratulations</p>`;
         document.removeEventListener('keydown', handleKeyPress);
+        document.getElementById('noticnt').innerHTML = `<p>The Answer is </p> <p class="numberr">${randomNumber}</p>`;
+        overlay.style.display = 'block'; // Hiện overlay
+        arlert.style.display = 'block';   // Hiện modal
     } else {
         randomNumber = Math.floor(Math.random() * (difficultyLevel + 1));
         document.getElementById('message').textContent = `Again 0 - ${difficultyLevel}`;
     }
 }
+
+// Ngăn việc click vào nội dung đằng sau
+overlay.addEventListener('click', () => {
+    overlay.style.display = 'none'; // Ẩn overlay
+    arlert.style.display = 'none';   // Ẩn modal
+});
