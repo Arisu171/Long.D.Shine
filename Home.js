@@ -1,3 +1,4 @@
+alert("welcome to my world");
 // chặn Devtool
 setInterval(function () {
     if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
