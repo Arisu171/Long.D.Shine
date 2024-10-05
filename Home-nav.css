@@ -1,0 +1,267 @@
+/* Navigation bar */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-blend-mode: overlay;
+    backdrop-filter: blur(3px);
+    background-color: #00000077;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: max-content;
+    transition: background-color 0.4s;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navtitle a {
+    text-shadow: 0 0 2px rgba(232, 139, 255, 0.808),
+        0 0 2px rgba(131, 22, 255, 0.5),
+        0 0 2px rgba(206, 100, 255, 0.349);
+}
+
+.navright>.navtitle:hover a {
+    text-shadow: 0 0 5px rgba(232, 139, 255, 0.808),
+        0 0 5px rgba(131, 22, 255, 0.5),
+        0 0 5px rgba(206, 100, 255, 0.349);
+}
+
+.navtitle a::after {
+    position: absolute;
+    background-color: rgba(221, 163, 255, 0.829);
+    content: '';
+    height: 6px;
+    border-radius: 6px;
+    bottom: -6%;
+    left: calc(0% + 15px);
+    width: calc(100% - 30px);
+    box-shadow: 0 0 5px rgba(132, 0, 255, 0.801);
+    transition: 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.navleft {
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.navright {
+    margin-left: 5vw;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 10px 20px;
+    transition: scale 0.3s, ;
+}
+
+.navtitle {
+    position: relative;
+    padding: 14px 18px 16px 18px;
+    line-height: 1;
+    transition: text-shadow 0.4s;
+}
+
+.navtitle:hover {
+    text-shadow: 0 0 5px rgba(232, 139, 255, 0.808),
+        0 0 5px rgba(131, 22, 255, 0.5),
+        0 0 5px rgba(206, 100, 255, 0.349);
+}
+
+.navtitle::after {
+    position: absolute;
+    background-color: rgba(217, 159, 255, 0.829);
+    content: '';
+    height: 6px;
+    border-radius: 6px;
+    bottom: -6%;
+    left: 50%;
+    width: 0%;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.navtitle:hover::after {
+    left: calc(0% + 15px);
+    width: calc(100% - 30px);
+    box-shadow: 0 0 10px rgba(140, 0, 255, 0.801);
+}
+
+.navdroplist {
+    position: absolute;
+}
+
+/* Navigation Button */
+
+.navbutton {
+    position: fixed;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    backdrop-filter: blur(3px);
+    color: white;
+    width: max-content;
+    padding: 0px;
+    transition: 0.5s ease;
+    transition-delay: 0s;
+}
+
+.navradius {
+    height: 65px;
+    top: 5px;
+    right: 5px;
+    background-color: #00000066;
+    border-radius: 50px;
+}
+
+.navcol {
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    background-color: #000000;
+}
+
+.navbutton div {
+    cursor: pointer;
+    transition: height 0.5s ease, opacity 0.3s ease;
+}
+
+.navicon {
+    text-align: center;
+    padding: 11px;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.navradius .navicon {
+    scale: 0.7;
+}
+
+.navicon i {
+    text-align: center;
+    width: 25px;
+    padding: 9px;
+}
+
+.navitem i {
+    font-size: 20px;
+    margin: 7px 0px;
+    transition: 0.7s ease;
+}
+
+.navitcap {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.navitem {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    text-align: center;
+    transition-delay: 0.4s;
+    transition: 0.7s ease;
+}
+
+.navradius .navitem {
+    opacity: 0;
+}
+
+.navradius:hover {
+    background-color: #000000d3;
+    height: 410px;
+    transition-delay: 0.2s;
+}
+
+.navbutton:hover .navitem {
+    opacity: 1;
+}
+
+.navbutton:hover .navicon {
+    scale: 1;
+    transition: 0.4s;
+}
+
+.navicon:hover {
+    transition: 0.5s;
+    background-color: #00000066;
+    text-shadow: 0 0 5px rgb(130, 53, 255),
+        0 0 5px rgba(255, 22, 22, 0.76),
+        0 0 5px rgba(233, 63, 255, 0.897);
+}
+
+.navitem:hover {
+    text-shadow: 0 0 5px rgba(232, 139, 255, 0.808),
+        0 0 5px rgba(131, 22, 255, 0.5),
+        0 0 5px rgba(206, 100, 255, 0.349);
+}
+
+/* Responsive navbar */
+
+@media (max-width: 1366px) {
+    .navbar {
+        font-size: calc(1.1vw + 6px);
+    }
+
+    .navright {
+        padding: 5px 10px;
+    }
+
+    .navtitle {
+        padding: calc(0.8vw + 5px) calc(0.9vw + 5px) calc(0.8vw + 4px) calc(0.9vw + 5px);
+    }
+
+    .navtitle a::after {
+        height: 3px;
+        bottom: -3%;
+        left: calc(0.8vw + 4px);
+        width: calc(100% - 1.6vw - 8px);
+        box-shadow: 0 0 3px rgba(255, 123, 0, 0.801);
+
+    }
+
+    .navtitle::after {
+        height: 3px;
+        bottom: -4%;
+    }
+
+    .navtitle:hover::after {
+        left: calc(0.8vw + 4px);
+        width: calc(100% - 1.6vw - 8px);
+        box-shadow: 0 0 6px rgba(255, 123, 0, 0.801);
+    }
+}
+
+@media (max-width: 665px) {
+    .navbar {
+        background-color: #00000000;
+        backdrop-filter: blur(0px);
+        transition: 0.3s;
+    }
+
+    .navright {
+        scale: 0;
+    }
+}
+
+/* Responsive Navbutton */
+
+@media (min-width: 666px) {
+    .navbutton {
+        scale: 0;
+        opacity: 0.8;
+        transition: 0.2s ease;
+    }
+
+    .navbutton div {
+        scale: 0;
+        opacity: 0;
+        transition: 0.2s ease;
+    }
+}

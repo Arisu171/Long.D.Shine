@@ -1,62 +1,32 @@
-alert("welcome to my world");
-// chặn Devtool
-setInterval(function () {
-    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
-        alert("Wut ảe u doing bro?");
-        window.location.reload();
-    }
-}, 1000);
+// alert("welcome to my world");
+// // chặn Devtool
+// setInterval(function () {
+//     if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+//         alert("Wut ảe u doing bro?");
+//         window.location.reload();
+//     }
+// }, 1000);
 
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'F12' ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'J') ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') ||
-        ((event.ctrlKey || event.metaKey) && event.key === 'U')) {
-        event.preventDefault();
-        alert("Wellcome to Devtool Lmao");
-    }
-});
+// document.addEventListener('keydown', function (event) {
+//     if (event.key === 'F12' ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'J') ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') ||
+//         ((event.ctrlKey || event.metaKey) && event.key === 'U')) {
+//         event.preventDefault();
+//         alert("Wellcome to Devtool Lmao");
+//     }
+// });
 
-document.addEventListener('copy', function (event) {
-    event.preventDefault();
-    alert("Coppy Failed Successful !!!");
-});
+// document.addEventListener('copy', function (event) {
+//     event.preventDefault();
+//     alert("Coppy Failed Successful !!!");
+// });
 
-document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-    alert("Rai cờ líc đít sa bờ lẹt");
-});
-
-// // Hàm phát hiện DevTools đang mở
-// function detectDevTools() {
-//     let devtoolsOpened = false;
-
-//     const devtools = /./;
-//     devtools.toString = function () {
-//         devtoolsOpened = true;
-//         // Thay thế nội dung của body khi DevTools mở
-//         document.body.innerHTML = `
-//                     <h1>DevTools đã bị phát hiện</h1>
-//                     <p>Nội dung trang đã được thay thế vì bạn đã mở Developer Tools.</p>
-//                 `;
-//     };
-
-//     // Kiểm tra console để phát hiện DevTools mở
-//     console.log(devtools);
-
-//     // Kiểm tra lại sau một thời gian ngắn để tránh báo cáo sai
-//     setTimeout(function () {
-//         if (!devtoolsOpened) {
-//             detectDevTools();
-//         }
-//     }, 1000);
-// }
-
-// Gọi hàm khi tài liệu đã sẵn sàng
-// window.onload = function () {
-//     detectDevTools();
-// }; gjhymgvj
+// document.addEventListener('contextmenu', function (event) {
+//     event.preventDefault();
+//     alert("Rai cờ líc đít sa bờ lẹt");
+// });
 
 // Lấy kích thước màn hình thiết bị
 let chieuRong = window.screen.width;
