@@ -82,7 +82,7 @@ function handleKeyPress(event) {
 // Kiểm tra đáp án người dùng đã chọn
 function checkGuess(userGuess) {
     if (userGuess === randomNumber) {
-        document.getElementById('message').innerHTML = `<p>Wellcome to Hell</p>`;
+        document.getElementById('message').innerHTML = "";
         document.removeEventListener('keydown', handleKeyPress);
         document.getElementById('noticnt').innerHTML = `<p>The Answer is </p> <p class="numberr">${randomNumber}</p>`;
         overlay.classList.remove('hide');
