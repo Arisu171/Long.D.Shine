@@ -27,7 +27,7 @@ function startGame() {
 
     document.getElementById('gameSection').style.display = 'block';
     document.getElementById('maxNumber').textContent = difficulty;
-    document.getElementById('message').textContent = 'Welcome to hell';
+    document.getElementById('message').textContent = 'Welcome to Hell';
 
     generateNumberOptions(difficulty);
     document.addEventListener('keydown', handleKeyPress);
@@ -82,11 +82,14 @@ function handleKeyPress(event) {
 // Kiểm tra đáp án người dùng đã chọn
 function checkGuess(userGuess) {
     if (userGuess === randomNumber) {
-        document.getElementById('message').innerHTML = `<p>Congratulations</p>`;
+        document.getElementById('message').innerHTML = `<p>Wellcome to Hell</p>`;
         document.removeEventListener('keydown', handleKeyPress);
         document.getElementById('noticnt').innerHTML = `<p>The Answer is </p> <p class="numberr">${randomNumber}</p>`;
-        overlay.style.display = 'block'; // Hiện overlay
-        arlert.style.display = 'block';   // Hiện modal
+        overlay.classList.remove('hide');
+        arlert.classList.remove('hide');
+        overlay.classList.add('show');
+        arlert.classList.add('show');
+        randomNumber = Math.floor(Math.random() * (difficultyLevel + 1));
     } else {
         randomNumber = Math.floor(Math.random() * (difficultyLevel + 1));
         document.getElementById('message').textContent = `Again 0 - ${difficultyLevel}`;
@@ -95,6 +98,8 @@ function checkGuess(userGuess) {
 
 // Ngăn việc click vào nội dung đằng sau
 overlay.addEventListener('click', () => {
-    overlay.style.display = 'none'; // Ẩn overlay
-    arlert.style.display = 'none';   // Ẩn modal
+    overlay.classList.remove('show');
+    arlert.classList.remove('show');
+    overlay.classList.add('hide');
+    arlert.classList.add('hide');
 });
