@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mượt mà chuyển đổi thành dấu X</title>
+    <style>
+        /* Định dạng chung cho icon */
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            width: 35px;
+            height: 30px;
+            position: relative;
+        }
+
+        .menu-icon .bar {
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            margin: 6px 0;
+            transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s ease;
+            border-radius: 2px;
+            /* Làm tròn các cạnh của thanh */
+        }
+
+        /* Chuyển đổi thành dấu X */
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+            /* Xoay gạch ngoài cùng theo chiều kim đồng hồ */
+        }
+
+        .change .bar2 {
+            width: 0;
+            /* Thu nhỏ thanh ở giữa lại thay vì ẩn nó */
+            opacity: 0;
+            /* Ẩn thanh giữa */
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-5px, -5px);
+            /* Xoay gạch ngoài cùng ngược chiều kim đồng hồ */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Icon menu với 3 gạch ngang -->
+    <div class="menu-icon" onclick="toggleMenu(this)">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+    </div>
+
+    <script>
+        function toggleMenu(x) {
+            x.classList.toggle("change"); // Thêm hoặc gỡ class 'change' để chuyển đổi
+        }
+    </script>
+
+</body>
+
+</html>

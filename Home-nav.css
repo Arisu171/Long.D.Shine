@@ -108,12 +108,9 @@
     color: white;
     width: max-content;
     padding: 0px;
-    transition: 0.5s ease;
-    transition-delay: 0s;
 }
 
 .navradius {
-    height: 65px;
     top: 5px;
     right: 5px;
     background-color: #00000066;
@@ -173,20 +170,53 @@
     opacity: 0;
 }
 
-.navradius:hover {
+.navradius.show {
+    background-color: #000000d3;
+    height: 410px;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.navradius.hide {
+    height: 65px;
+    transition: height 0.5s;
+    transition-delay: 0.2s;
+}
+
+/* .navradius:hover {
     background-color: #000000d3;
     height: 410px;
     transition-delay: 0.2s;
 }
-
-.navbutton:hover .navitem {
+*/
+.navitem.show {
     opacity: 1;
 }
 
-.navbutton:hover .navicon {
+.navitem.hide {
+    opacity: 0;
+}
+
+/*
+.navbutton:hover .navitem {
+    opacity: 1;
+}
+*/
+.navicon.show {
     scale: 1;
     transition: 0.4s;
 }
+
+.navicon.hide {
+    scale: 1;
+    transition: 0.4s;
+}
+
+/*
+.navbutton:hover .navicon {
+    scale: 1;
+    transition: 0.4s;
+} */
 
 .navicon:hover {
     transition: 0.5s;
