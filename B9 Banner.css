@@ -68,8 +68,6 @@ body {
     position: absolute;
     z-index: 50;
     top: 0;
-    /* transition: transform 1s ease; */
-    /* Thay đổi thành transform */
 }
 
 .bannerimg1 {
@@ -90,8 +88,8 @@ body {
 
 .bannerimg3 {
     transform: translateX(0);
-    /* Ảnh trung tâm */
     z-index: 52;
+    opacity: 1;
     transition: transform 1s ease;
 }
 
