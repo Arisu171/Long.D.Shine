@@ -84,13 +84,11 @@ input[type="reset"] {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    /* Green */
+    background-color: #00a2ff;
 }
 
 input[type="reset"] {
     background-color: #f44336;
-    /* Red */
     margin-left: 10px;
 }
 
@@ -106,6 +104,12 @@ input[type="reset"]:hover {
 
 select {
     width: 30%;
+}
+
+.send {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 .error-message {
