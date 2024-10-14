@@ -50,11 +50,24 @@ input[type="checkbox"] {
     margin: 0px 8px 0px 0px;
 }
 
+.date-group select {
+    cursor: pointer;
+}
+
+select option {
+    cursor: pointer;
+}
+
 .gender-group {
     margin-top: 10px;
     width: 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.gender-group input,
+.gender-group label {
+    cursor: pointer;
 }
 
 .checkbox-group {
@@ -66,6 +79,11 @@ input[type="checkbox"] {
     height: 23px;
     display: flex;
     align-items: center;
+}
+
+.fav input,
+.fav label {
+    cursor: pointer;
 }
 
 textarea {

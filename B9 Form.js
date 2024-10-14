@@ -1,19 +1,51 @@
 window.onload = function () {
+    // Tạo danh sách ngày, tháng, và năm khi trang được tải
     const ngaySelect = document.getElementById('ngay');
-    for (let i = 1; i <= 31; i++) {
-        const option = document.createElement('option');
-        option.value = i;
-        option.text = i;
-        ngaySelect.appendChild(option);
-    }
-
+    const thangSelect = document.getElementById('thang');
     const namSelect = document.getElementById('nam');
+
+    // Tạo danh sách năm từ 1950 đến 2024
     for (let i = 1950; i <= new Date().getFullYear(); i++) {
         const option = document.createElement('option');
         option.value = i;
         option.text = i;
         namSelect.appendChild(option);
     }
+
+    // Hàm kiểm tra năm nhuận
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    // Hàm cập nhật số ngày theo tháng và năm
+    function updateDays() {
+        const month = parseInt(thangSelect.value);
+        const year = parseInt(namSelect.value);
+        let daysInMonth;
+
+        // Xác định số ngày của từng tháng
+        if (month === 2) { // Tháng 2
+            daysInMonth = isLeapYear(year) ? 29 : 28;
+        } else if ([4, 6, 9, 11].includes(month)) { // Các tháng có 30 ngày
+            daysInMonth = 30;
+        } else { // Các tháng có 31 ngày
+            daysInMonth = 31;
+        }
+
+        // Xóa các tùy chọn ngày hiện tại
+        ngaySelect.innerHTML = '<option value="" disabled selected>Ngày</option>';
+
+        // Thêm lại các tùy chọn ngày mới
+        for (let i = 1; i <= daysInMonth; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.text = i;
+            ngaySelect.appendChild(option);
+        }
+    }
+
+    thangSelect.addEventListener('change', updateDays);
+    namSelect.addEventListener('change', updateDays);
 
     const form = document.querySelector('form');
     form.addEventListener('submit', function (event) {
