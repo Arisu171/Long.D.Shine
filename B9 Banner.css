@@ -53,6 +53,18 @@ body {
     transition: opacity 0.5s ease;
 }
 
+h1 {
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    opacity: 0.1;
+    text-align: center;
+    width: 100vw;
+    font-size: 5vw;
+    margin-top: calc(var(--cao) /2 - 30px);
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+}
+
 .homebanner {
     z-index: 50;
     overflow: hidden;
@@ -116,11 +128,21 @@ body {
 }
 
 .bannercontrol {
-    color: rgb(190, 190, 190);
+    color: rgb(201, 201, 201);
     font-size: calc(10px + 4vw);
     opacity: 0.5;
     top: calc(50% - 5px - 2vw);
     cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.bannercontrol:hover {
+    color: rgb(41, 41, 41);
+}
+
+.bannercontrol:active {
+    color: black;
+    opacity: 0.6;
 }
 
 #bannercontrolprev {
@@ -141,4 +163,12 @@ body {
     opacity: 70%;
     transition: 1s ease;
     cursor: pointer;
+}
+
+.bannercurrent:hover {
+    color: rgb(148, 148, 148);
+}
+
+.bannercurrent :active {
+    color: rgb(27, 27, 27);
 }
