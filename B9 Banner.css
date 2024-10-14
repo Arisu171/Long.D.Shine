@@ -1,3 +1,46 @@
+html {
+    background-color: rgb(27, 27, 27);
+    font-family: Poppins;
+    scroll-behavior: smooth;
+    caret-color: transparent;
+    cursor: default;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    /* Vô hiệu hóa chọn văn bản */
+    -webkit-touch-callout: none;
+    /* Ngăn chặn menu context trên iOS */
+    -webkit-user-select: none;
+    /* Ngăn chọn văn bản trên iOS */
+    -khtml-user-select: none;
+    /* Ngăn chọn văn bản trên Konqueror */
+    -moz-user-select: none;
+    /* Ngăn chọn văn bản trên Firefox */
+    -ms-user-select: none;
+    /* Ngăn chọn văn bản trên Internet Explorer */
+    user-select: none;
+    /* Ngăn chọn văn bản trên các trình duyệt chuẩn */
+}
+
+:root {
+    --Wid: 100vw;
+    /* Giá trị mặc định */
+    --Hig: 100vh;
+    /* Giá trị mặc định */
+    --pot: calc(var(--pot) * 1);
+}
+
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
 :root {
     --cao: calc(100vw * 1080 / 1920);
 }
@@ -6,6 +49,8 @@ body {
     margin: 0;
     background-color: rgb(27, 27, 27);
     color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .homebanner {
@@ -22,21 +67,48 @@ body {
     width: 100%;
     position: absolute;
     z-index: 50;
-    top: 0px;
-    transition: 0.5s ease;
-    transition-delay: 0.1s;
+    top: 0;
+    /* transition: transform 1s ease; */
+    /* Thay đổi thành transform */
 }
 
-.bannerimgcurrent {
-    left: 0px;
+.bannerimg1 {
+    transform: translateX(200%);
+    z-index: 50;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+    transition-delay: 0.2s;
+    opacity: 0.44;
 }
 
-.bannerimgprevious {
-    right: 100%;
+.bannerimg2 {
+    transform: translateX(100%);
+    z-index: 51;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition-delay: 0.2s;
+    opacity: 0.4;
 }
 
-.bannerimgnext {
-    left: 100%;
+.bannerimg3 {
+    transform: translateX(0);
+    /* Ảnh trung tâm */
+    z-index: 52;
+    transition: transform 1s ease;
+}
+
+.bannerimg4 {
+    transform: translateX(-100%);
+    z-index: 51;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition-delay: 0.2s;
+    opacity: 0.4;
+}
+
+.bannerimg5 {
+    transform: translateX(-200%);
+    z-index: 50;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+    transition-delay: 0.2s;
+    opacity: 0.4;
 }
 
 .bannercontrol,
@@ -69,4 +141,6 @@ body {
     left: calc(50% - 100px);
     bottom: 20px;
     opacity: 70%;
+    transition: 1s ease;
+    cursor: pointer;
 }
