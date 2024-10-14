@@ -1,4 +1,72 @@
+:root {
+    --cao: calc(100vw * 1080 / 1920);
+}
+
 body {
     margin: 0;
     background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.homebanner {
+    z-index: 50;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: var(--cao);
+    max-height: 100vh;
+    margin: 0px;
+}
+
+.bannerimg {
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    top: 0px;
+    transition: 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.bannerimgcurrent {
+    left: 0px;
+}
+
+.bannerimgprevious {
+    right: 100%;
+}
+
+.bannerimgnext {
+    left: 100%;
+}
+
+.bannercontrol,
+.bannercurrent {
+    position: absolute;
+    z-index: 60;
+}
+
+.bannercontrol {
+    color: rgb(190, 190, 190);
+    font-size: calc(10px + 4vw);
+    opacity: 0.5;
+    top: calc(50% - 30px);
+    cursor: pointer;
+}
+
+#bannercontrolprev {
+    left: 20px;
+}
+
+#bannercontrolnext {
+    right: 20px;
+}
+
+.bannercurrent {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 200px;
+    left: calc(50% - 100px);
+    bottom: 20px;
+    opacity: 70%;
 }
