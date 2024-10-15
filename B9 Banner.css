@@ -51,6 +51,7 @@ body {
     color: white;
     opacity: 0;
     transition: opacity 0.5s ease;
+    font-family: Montserrat;
 }
 
 h1 {
@@ -70,7 +71,7 @@ h1 {
     overflow: hidden;
     position: relative;
     width: 100vw;
-    height: var(--cao);
+    height: calc(100vw * 9 / 16);
     max-height: 100vh;
     margin: 0px;
 }
@@ -128,12 +129,11 @@ h1 {
 }
 
 .bannercontrol {
-    color: rgb(201, 201, 201);
+    color: rgba(201, 201, 201, 0.507);
     font-size: calc(10px + 4vw);
-    opacity: 0.5;
     top: calc(50% - 5px - 2vw);
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: color 0.4s ease;
 }
 
 .bannercontrol:hover {
@@ -141,27 +141,25 @@ h1 {
 }
 
 .bannercontrol:active {
-    color: black;
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.596);
 }
 
 #bannercontrolprev {
-    left: 20px;
+    left: 2vw;
 }
 
 #bannercontrolnext {
-    right: 20px;
+    right: 2vw;
 }
 
 .bannercurrent {
-    font-size: 25px;
+    font-size: 1.3vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 200px;
-    left: calc(50% - 100px);
-    bottom: 20px;
+    width: 16vw;
+    left: 42vw;
+    bottom: 0.5vw;
     opacity: 70%;
-    transition: 1s ease;
     cursor: pointer;
 }
 
@@ -172,3 +170,138 @@ h1 {
 .bannercurrent :active {
     color: rgb(27, 27, 27);
 }
+
+.bannercontent {
+    z-index: 59;
+    position: absolute;
+    text-align: center;
+    top: calc(var(--cao) /3 - 30px);
+    width: 60vw;
+    left: 20vw;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+}
+
+.bannertitle {
+    font-size: 6vw;
+    font-family: "Koulen", sans-serif;
+    line-height: 1;
+}
+
+.bannerbio {
+    font-size: 2vw;
+    font-family: "Inter", sans-serif;
+    margin-top: 1vw;
+    margin-bottom: 2.5vw;
+    color: rgb(233, 233, 233);
+}
+
+.bannersearchbar {
+    margin: auto;
+    width: 60vw;
+    height: 5vw;
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 100vw;
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.897);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bannersearchbarleft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+}
+
+.searchbaroption {
+    display: flex;
+    height: 5vw;
+    align-items: center;
+    font-size: 1.8vw;
+    transition: scale 0.3s ease, color 0.3s ease;
+}
+
+.searchbaroption:hover {
+    color: rgb(255, 246, 204);
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.searchbaroption i {
+    font-size: 2.3vw;
+    width: 2.3vw;
+    height: 2.3vw;
+    padding: 0.35vw;
+}
+
+#searchbaroption1 {
+    margin-left: 2.8vw;
+}
+
+.line {
+    height: 2vw;
+    width: 0.5px;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.optext {
+    margin-left: 1.4vw;
+}
+
+.searchbarinput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vw;
+    width: 18vw;
+    margin-right: 0px;
+}
+
+.searchbarinput input[type="text"] {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    width: 10vw;
+    margin: 1vw;
+    font-size: 1.8vw;
+    text-align: center;
+    color: white;
+    caret-color: rgba(255, 255, 255, 0.582);
+}
+
+#searchiconx {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 3vw;
+    margin: 1vw;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+#searchiconx::after {
+    position: absolute;
+    background-color: black;
+    width: 5vw;
+    height: 5vw;
+    top: 0px;
+    left: 0px;
+}
+
+#searchiconx:hover {
+    scale: 1.2;
+    color: rgb(255, 246, 204);
+}
+
+/* .searchicon i {
+    background-color: rgba(0, 0, 0, 0.226);
+    font-size: 2vw;
+    width: 2vw;
+    height: 2vw;
+    padding: 1.5vw;
+    margin-right: -1vw;
+    border-radius: 50%;
+} */

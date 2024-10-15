@@ -102,93 +102,93 @@ document.querySelectorAll('.bannercurrent div').forEach((dot, index) => {
     });
 });
 
-// Gọi updateDots() lần đầu tiên để cập nhật icon ban đầu
-updateDots();
-setTimeout(() => {
-    next();
-    startAutoSlide(); // Khởi chạy banner tự động sau lần đầu
-}, 500);
+// // Gọi updateDots() lần đầu tiên để cập nhật icon ban đầu
+// updateDots();
+// setTimeout(() => {
+//     next();
+//     startAutoSlide(); // Khởi chạy banner tự động sau lần đầu
+// }, 500);
 
 
-document.addEventListener('keydown', function (e) {
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-        console.log("Đã ngăn Ctrl + U");
-    }
-});
+// document.addEventListener('keydown', function (e) {
+//     if (e.ctrlKey && e.key === 'u') {
+//         e.preventDefault();
+//         console.log("Đã ngăn Ctrl + U");
+//     }
+// });
 
-let originalContent = document.getElementById('homebanner').innerHTML;
-setInterval(function () {
-    const replace = document.getElementById('homebanner');
-    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
-        replace.innerHTML = '';
-    } else {
-        if (replace.innerHTML === '') {
-            replace.innerHTML = originalContent;
-        }
-    }
-}, 1000);
-
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'F12' ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'J') ||
-        ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') ||
-        ((event.ctrlKey || event.metaKey) && event.key === 'U')) {
-        event.preventDefault();
-        console.log("Đã ngăn Devtool");
-    }
-});
-
-document.addEventListener('copy', function (event) {
-    event.preventDefault();
-    console.log("Coppy Failed Successful !!!");
-});
-
-document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-    console.log("Rai cờ líc đít sa bờ lẹt");
-});
-
-// Mã hóa với AES
-function encryptData(data) {
-    var key = CryptoJS.enc.Utf8.parse('1234567890123456'); // Khóa bí mật (16 bytes cho AES-128)
-    var iv = CryptoJS.enc.Utf8.parse('1234567890123456');  // IV (16 bytes)
-
-    var encrypted = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(data), key, {
-        keySize: 128 / 8,
-        iv: iv,
-        mode: CryptoJS.mode.CBC,
-        padding: CryptoJS.pad.Pkcs7
-    });
-
-    return encrypted.toString();
-}
-
-var encryptedData = encryptData('Dữ liệu nhạy cảm');
-console.log("Dữ liệu đã mã hóa: " + encryptedData);
+// let originalContent = document.getElementById('homebanner').innerHTML;
+// setInterval(function () {
+//     const replace = document.getElementById('homebanner');
+//     if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+//         replace.innerHTML = '';
+//     } else {
+//         if (replace.innerHTML === '') {
+//             replace.innerHTML = originalContent;
+//         }
+//     }
+// }, 1000);
 
 
-var encryptedData = encryptData('Dữ liệu nhạy cảm');
-console.log(encryptedData);
-(function () {
-    const threshold = 160;
-    let devtools = false;
+// document.addEventListener('keydown', function (event) {
+//     if (event.key === 'F12' ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'J') ||
+//         ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') ||
+//         ((event.ctrlKey || event.metaKey) && event.key === 'U')) {
+//         event.preventDefault();
+//         console.log("Đã ngăn Devtool");
+//     }
+// });
 
-    const detectDevTools = () => {
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-        if (widthThreshold || heightThreshold) {
-            if (!devtools) {
-                devtools = true;
-                console.log('DevTools được mở');
-            }
-        } else {
-            devtools = false;
-        }
-    };
+// document.addEventListener('copy', function (event) {
+//     event.preventDefault();
+//     console.log("Coppy Failed Successful !!!");
+// });
 
-    window.addEventListener('resize', detectDevTools);
-    detectDevTools();
-})();
+// document.addEventListener('contextmenu', function (event) {
+//     event.preventDefault();
+//     console.log("Rai cờ líc đít sa bờ lẹt");
+// });
+
+// // Mã hóa với AES
+// function encryptData(data) {
+//     var key = CryptoJS.enc.Utf8.parse('1234567890123456'); // Khóa bí mật (16 bytes cho AES-128)
+//     var iv = CryptoJS.enc.Utf8.parse('1234567890123456');  // IV (16 bytes)
+
+//     var encrypted = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(data), key, {
+//         keySize: 128 / 8,
+//         iv: iv,
+//         mode: CryptoJS.mode.CBC,
+//         padding: CryptoJS.pad.Pkcs7
+//     });
+
+//     return encrypted.toString();
+// }
+
+// var encryptedData = encryptData('Dữ liệu nhạy cảm');
+// console.log("Dữ liệu đã mã hóa: " + encryptedData);
+
+
+// var encryptedData = encryptData('Dữ liệu nhạy cảm');
+// console.log(encryptedData);
+// (function () {
+//     const threshold = 160;
+//     let devtools = false;
+
+//     const detectDevTools = () => {
+//         const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+//         const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+//         if (widthThreshold || heightThreshold) {
+//             if (!devtools) {
+//                 devtools = true;
+//                 console.log('DevTools được mở');
+//             }
+//         } else {
+//             devtools = false;
+//         }
+//     };
+
+//     window.addEventListener('resize', detectDevTools);
+//     detectDevTools();
+// })();

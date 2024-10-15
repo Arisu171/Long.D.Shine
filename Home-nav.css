@@ -171,9 +171,9 @@
 }
 
 .navradius.show {
-    background-color: #000000d3;
+    /* background-color: #000000d3; */
     height: 410px;
-    transition: 0.5s;
+    transition: height 0.5s ease;
     transition-delay: 0.2s;
 }
 
