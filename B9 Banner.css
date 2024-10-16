@@ -186,6 +186,7 @@ h1 {
     font-size: 6vw;
     font-family: "Koulen", sans-serif;
     line-height: 1;
+    text-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 0.705);
 }
 
 .bannerbio {
@@ -272,12 +273,19 @@ h1 {
     caret-color: rgba(255, 255, 255, 0.582);
 }
 
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.589);
+}
+
 #searchiconx {
     background-color: rgba(0, 0, 0, 0);
     font-size: 3vw;
-    margin: 1vw;
+    width: 3vw;
+    height: 3vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
     border-radius: 50%;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     position: relative;
     cursor: pointer;
 }
@@ -285,15 +293,16 @@ h1 {
 #searchiconx::after {
     position: absolute;
     background-color: black;
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     top: 0px;
     left: 0px;
 }
 
 #searchiconx:hover {
-    scale: 1.2;
+    scale: 1.25;
     color: rgb(255, 246, 204);
+    background-color: rgba(0, 0, 0, 0.137);
 }
 
 /* .searchicon i {
