@@ -10,6 +10,7 @@
 .navbar {
     display: flex;
     position: fixed;
+    align-items: center;
     justify-content: space-between;
     background-blend-mode: overlay;
     backdrop-filter: blur(0.8vw);
@@ -20,9 +21,9 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: max-content;
+    padding: 0.5vw 0;
     transition: background-color 0.4s, backdrop-filter 0.4s;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .navbar a {
@@ -31,12 +32,12 @@
 }
 
 .navtitle:hover {
-    text-shadow: 0 0 0.2vw rgba(212, 139, 255, 0.808),
-        0 0 0.2vw rgba(189, 22, 255, 0.5),
-        0 0 0.2vw rgba(242, 100, 255, 0.349);
+    text-shadow: 0 0 1vw rgba(212, 139, 255, 0.808),
+        0 0 1vw rgba(189, 22, 255, 0.5),
+        0 0 1vw rgba(242, 100, 255, 0.349);
 }
 
-.navbarcurrent a::after {
+.navtitle.navcurrent::after {
     position: absolute;
     background-color: rgba(250, 216, 255, 0.829);
     content: '';
@@ -59,7 +60,7 @@
     align-items: center;
     cursor: pointer;
     display: flex;
-    padding: 0 2.5vw 0 0;
+    padding: 0 1.5vw 0 0;
     transition: scale 0.3s;
 }
 
@@ -72,7 +73,7 @@
 
 .navtitle::after {
     position: absolute;
-    background-color: rgba(223, 174, 255, 0.829);
+    background-color: rgba(176, 58, 255, 0.829);
     content: '';
     height: calc(0.3vw + 1px);
     border-radius: 100vw;
@@ -81,6 +82,7 @@
     width: 0%;
     transition: left 0.5s ease, width 0.5s ease, box-shadow 0.5s ease;
     transition-delay: 0.2s;
+    z-index: 1000;
 }
 
 .navtitle:hover::after {
@@ -89,6 +91,7 @@
     box-shadow: 0 0 1vw rgba(195, 0, 255, 0.801);
 }
 
+/* 
 .navdroplist {
     height: 0;
     overflow-y: hidden;
@@ -143,8 +146,10 @@
         0 0 1vw rgba(189, 22, 255, 0.5),
         0 0 1vw rgba(242, 100, 255, 0.349);
 }
+ */
 
 /* Navigation Button */
+
 
 .navbutton {
     position: fixed;
@@ -159,7 +164,7 @@
     border-radius: 100vw;
     scale: 0;
     opacity: 0;
-    transition: height 0.5s ease, opacity 0.5s ease, scale 0.5s ease;
+    transition: height 0.5s ease, opacity 0.5s ease, scale 0.5s ease, border-radius 0.5s ease;
     z-index: 1000;
 }
 
@@ -193,6 +198,7 @@
 .navitcap {
     font-size: 1.5vw;
     font-weight: 400;
+    margin-top: 0.6vw;
 }
 
 .navitem {
@@ -202,6 +208,7 @@
     text-align: center;
     transition-delay: 0.4s;
     transition: height 0.7s ease;
+    margin-bottom: 0.9vw;
 }
 
 .navradius .navitem {
@@ -235,7 +242,8 @@
 }
 
 .navradius.show {
-    height: 64vw;
+    height: 53vw;
+    border-radius: 3vw;
 }
 
 .navradius.hide {
@@ -254,13 +262,14 @@
     opacity: 0;
 }
 
+/* 
 .navuser.show {
     opacity: 1;
 }
 
 .navuser.hide {
     opacity: 0;
-}
+} */
 
 .navicon.show,
 .navicon.hide {
@@ -279,6 +288,7 @@
         0 0 1vw rgba(242, 100, 255, 0.349);
 }
 
+/* 
 #Pages,
 #Transpos {
     position: relative;
@@ -379,7 +389,7 @@
 .show#rmulticon6 {
     top: 8vw;
     left: -8.5vw;
-}
+} */
 
 @media (max-width: 768px) {
     .navbar {
