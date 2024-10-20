@@ -7,10 +7,12 @@
     width: 100vw;
     height: 5vw;
     top: 0;
-    background-color: rgba(27, 27, 27, 0.897);
-    backdrop-filter: blur(300px);
-    opacity: 1;
+    background-color: rgba(27, 27, 27, 0.466);
+    backdrop-filter: blur(20px);
+    opacity: 2;
     transition: opacity 0.5s ease;
+    mix-blend-mode: overlay;
+    z-index: 90;
 }
 
 .navbar {
@@ -35,9 +37,9 @@
 }
 
 .navtitle:hover {
-    text-shadow: 0 0 1vw rgba(212, 139, 255, 0.808),
-        0 0 1vw rgba(189, 22, 255, 0.5),
-        0 0 1vw rgba(242, 100, 255, 0.349);
+    text-shadow: 0 0 0.3vw rgba(212, 139, 255, 0.808),
+        0 0 0.3vw rgba(189, 22, 255, 0.5),
+        0 0 0.3vw rgba(242, 100, 255, 0.349);
 }
 
 .navtitle.navcurrent::after {
@@ -49,7 +51,7 @@
     bottom: 10%;
     left: 1.8vw;
     width: calc(100% - 3.6vw);
-    box-shadow: 0 0 1vw rgba(183, 0, 255, 0.801);
+    box-shadow: 0 0 0.8vw rgba(183, 0, 255, 0.801);
     transition: 0.5s ease;
     transition-delay: 0.2s;
 }
@@ -91,7 +93,7 @@
 .navtitle:hover::after {
     left: 1.5vw;
     width: calc(100% - 3vw);
-    box-shadow: 0 0 1vw rgba(195, 0, 255, 0.801);
+    box-shadow: 0 0 0.8vw rgba(195, 0, 255, 0.801);
 }
 
 /* 
@@ -246,7 +248,7 @@
 
 .navradius.show {
     height: 53vw;
-    border-radius: 3vw;
+    border-radius: 2vw;
 }
 
 .navradius.hide {
@@ -277,6 +279,13 @@
 .navicon.show,
 .navicon.hide {
     transition: scale 0.5s ease, text-shadow 0.5s ease;
+}
+
+.navicon,
+.navitem {
+    text-shadow: 0 0 0.4vw rgba(212, 139, 255, 0.808),
+        0 0 0.4vw rgba(189, 22, 255, 0.5),
+        0 0 0.4vw rgba(242, 100, 255, 0.349);
 }
 
 .navicon:hover {

@@ -1,23 +1,134 @@
 #body {
     color: white;
     font-family: 'montserrat';
-    padding: 3vw 8vw;
+    padding: 0vw 8vw;
 }
 
 .space {
-    height: 6vw;
+    height: 3vw;
 }
 
 .title {
     font-family: 'jost';
+    text-align: center;
     font-size: 3.5vw;
     font-weight: 600;
     line-height: 1.3;
-    padding: 1.2vw 1.7vw;
+    padding: 1.2vw 1.7vw 3vw;
     transition: 0.3s ease;
-    background: linear-gradient(to right, #6b11fa, #ffffff, #fff, #fff);
+    background: linear-gradient(to right, #6b11fa, #6b11fa, #ce7bff, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.bodytext {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.about {
+    scale: 0.9;
+}
+
+.about .contentzone {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 80vw;
+    padding: 2vw;
+    background-color: rgb(24, 24, 24);
+    border-radius: 2vw;
+    box-shadow: 0 0 1vw #6b11fa;
+}
+
+.content {
+    padding: 1vw;
+    margin: 1vw;
+    position: relative;
+}
+
+.contenttitle {
+    font-size: 2vw;
+    font-family: 'jost';
+    font-weight: 500;
+    color: rgb(220, 176, 255);
+    padding: 1.5vw 1vw;
+}
+
+.content.myinfo {
+    border-radius: 1.2vw;
+    background: linear-gradient(36deg, #6b11fa, #c96cff);
+    box-shadow: 0 0 1vw #6b11fa;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content.myinfo:hover {
+    box-shadow: 0 0 2vw #6b11fa;
+    opacity: 0.95;
+}
+
+.contenttitle.myinfo {
+    color: #e7beff;
+    font-size: 2.3vw;
+}
+
+.bodytext.myinfo {
+    font-size: 1.8vw;
+    font-family: 'prompt';
+    text-align: left;
+    line-height: 1.3;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    width: fit-content;
+}
+
+.bodytext.myinfo:hover {
+    opacity: 80%;
+}
+
+.content.declare {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1.2vw;
+    box-shadow: inset 0 0 1.5vw rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.content.declare:hover {
+    box-shadow: inset 0 0 2.5vw rgb(0, 0, 0);
+}
+
+.content.declare:hover .contenttitle {
+    text-shadow: 0 0 0.5vw #6b11fa;
+}
+
+.contenttitle.declare {
+    margin-left: 2vw;
+}
+
+.bodytext.declare {
+    margin: 0 2vw 1vw;
+    font-size: 1.3vw;
+}
+
+.linktomyprofile {
+    position: absolute;
+    font-family: 'prompt';
+    font-weight: 700;
+    color: #ffffff;
+    bottom: 2vw;
+    left: 2vw;
+    font-size: 1.5vw;
+    padding: 1.4vw 2vw;
+    background: linear-gradient(36deg, #6b11fa, #b12aff);
+    border-radius: 1.5vw;
+    transition: 0.3s ease;
+}
+
+.linktomyprofile:hover {
+    scale: 1.1;
+    color: rgb(24, 24, 24);
+    opacity: 0.8;
+    box-shadow: 0 0 0.8vw #6b11fa;
 }
 
 @media (max-width: 768px) {
