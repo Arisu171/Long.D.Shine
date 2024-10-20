@@ -1,4 +1,4 @@
-alert("CALCULATOR = 3a ok?")
+alert("nút CALCULATOR = Bài 6a!")
 function performCalculation(operation, num1Id, num2Id, resultId) {
     const num1 = parseFloat(document.getElementById(num1Id).value);
     const num2 = parseFloat(document.getElementById(num2Id).value);
