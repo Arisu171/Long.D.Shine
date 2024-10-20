@@ -127,18 +127,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: calc(var(--pot) * 30) calc(var(--pot) * 37);
+    border: 0.3vw solid rgba(157, 83, 255, 0.884);
     box-shadow: 0 0 calc(var(--pot) * 3) calc(var(--pot) * 2) rgba(133, 81, 255, 0.6), 0 0 calc(var(--pot) * 2) calc(var(--pot) * 3) rgba(241, 90, 255, 0.3);
 }
 
 .linkto :active {
-    text-shadow: 0px 0px 0.3vw #a45eff, 0px 0px 0.3vw #ffffff, 0px 0px 0.3vw #b2a4ff;
     box-shadow: 0px 0px 0.3vw 0.3vw rgba(255, 52, 164, 0.6), 0px 0px 0.3vw 0.3vw rgba(93, 90, 255, 0.3);
 }
 
 /* Content */
-.about {
-    display: none;
-}
 
 @keyframes hideItem {
     0% {
@@ -159,8 +156,6 @@
         display: block;
     }
 }
-
-@media (max-width: 1000px) {}
 
 @media (max-width: 768px) {
 
