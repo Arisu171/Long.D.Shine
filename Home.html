@@ -7,90 +7,153 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="Home-nav.css">
+    <link rel="stylesheet" href="Home-banner.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 
-<body id="bodyy">
-    <div id="shadow"></div>
-    <div class="navbar">
-        <div class="navright" id="navright">
-            <div class="navtitle"><a href="#bannerimg1">Home</a></div>
-            <div class="navtitle">About Us</div>
-            <div class="navtitle">Skill</div>
-            <div class="navtitle">Project</div>
-            <div class="navtitle">Contact</div>
-        </div>
-        <div class="navbutton navradius navhide hide" id="navbutt" onclick="shownav()">
-            <div class="navicon navhide" id="navicon"><i class="fa-solid fa-bars"></i></div>
-            <div class="navitem navhide">
-                <a href="#bannerimg1">
-                    <i class="fa-solid fa-house"></i>
-                    <div class="navitcap">Home</div>
-                </a>
-            </div>
-            <div class="navitem navhide">
-                <i class="fa-solid fa-user"></i>
-                <div class="navitcap">About Us</div>
-            </div>
-            <div class="navitem navhide">
-                <i class="fa-solid fa-code"></i>
-                <div class="navitcap">Skill</div>
-            </div>
-            <div class="navitem navhide">
-                <i class="fa-solid fa-diagram-project"></i>
-                <div class="navitcap">Project</div>
-            </div>
-            <div class="navitem navhide">
-                <i class="fa-solid fa-address-book"></i>
-                <div class="navitcap">Contact</div>
-            </div>
-        </div>
-    </div>
-    <div class="inf">
-        <div class="text">
-            <div class="name" id="name">I am Long</div>
-            <div class="career">Web Developer</div>
-            <div class="career">UX Designer</div>
-        </div>
-        <div class="img"><img src="Dreamer.png" alt=""></div>
-        <div class="bio">I break down compex users experinece problems to create intergritly focussed solutions that
-            connect billions of people</div>
-        <div class="contact">
-            <div class="icon">
-                <div><a href="https://github.com/Arisu171"><img src="Git.png"></a></div>
-                <div><a href="https://www.facebook.com/long.Des171"><img src="Facebook.png"></a></div>
-                <div><a
-                        href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSGLdhTRxPPSvgvlKchdxwjgcrRqDZpJBqszLlkTvtJwgGmXmMXRwmVPltznwpjplWsXTWJF"><img
-                            src="GMail.png"></a></div>
-            </div>
-            <div class="linkto"><a href="https://arisu171.github.io/Long.D.Shine/Total-Tool.html">My Projects</a></div>
-            <br><br><br>
-        </div>
-    </div>
-    <div class="about">
-        <div class="title"></div>
-        <div class="content">
-            <div class="myself">
-                <div class="myname"><span class="label">My name is</span><span class="text">Nguyễn Bảo Long</span></div>
-                <div class="myage"><span class="label">I am</span><span class="text">19 Years old</span></div>
-                <div class="mycareer"><span class="label">I am studying and working in the field of</span><span
-                        class="text">Information Technology</span></div>
-                <div class="myhobbie"><span class="label">My hobbies are</span>
-                    <div class="hobbie">Puzzle solving</div>
-                    <div class="hobbie">Playing Game</div>
-                    <div class="hobbie">Listening to Music</div>
-                    <div class="hobbie">Playing chess</div>
+<body>
+    <div id="navigationbar">
+        <div id="shadow"></div>
+        <div class="navbar">
+            <div class="navleft"><a href="#bannerimg1"></a></div>
+            <div class="navright" id="navright">
+                <div class="navtitle navbarcurrent" id="navbarHome"><a href="#">Home</a></div>
+                <div class="navtitle" id="navbarPages">
+                    <a href="#" class="navdroptitle">Pages</a>
+                    <div class="navdroplist">
+                        <a href="#">About Us</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Destinations</a>
+                    </div>
                 </div>
+                <a href="#" class="navtitle" id="navbarTourist">Tourist</a>
+                <a href="#" class="navtitle" id="navbarRegions">Regions</a>
+                <div class="navtitle" id="navbarTrans">
+                    <a href="#" class="navdroptitle">Transportations</a>
+                    <div class="navdroplist">
+                        <a href="#">Carental</a>
+                        <a href="#">Bus Shuttle</a>
+                        <a href="#">Airpot Trans</a>
+                    </div>
+                </div>
+                <a href="#" class="navtitle" id="navbarBlog">Blog</a>
+                <a href="#" class="navuser"><i class="fa fa-user"></i></a>
             </div>
-            <div class="aboutme">
-
+            <div class="navbutton navradius navhide hide" id="navbutt">
+                <div class="navicon navhide" id="navicon" onclick="shownav()"><i class="fa-solid fa-bars"></i></div>
+                <div class="navitem navhide">
+                    <a href="#bannerimg1">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="navitcap">Home</div>
+                    </a>
+                </div>
+                <div class="navitem navhide" id="Pages">
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <div class="navitcap">Pages</div>
+                    </div>
+                    <a href="#" class="multicon multiconpage hide" id="rmulticon0">
+                        <div>About</div>
+                    </a>
+                    <a href="#" class="multicon multiconpage hide" id="rmulticon2">
+                        <div>Services</div>
+                    </a>
+                    <a href="#" class="multicon multiconpage hide" id="rmulticon4">
+                        <div>Contact</div>
+                    </a>
+                    <a href="#" class="multicon multiconpage hide" id="rmulticon6">
+                        <div>Dests</div>
+                    </a>
+                </div>
+                <div class="navitem navhide">
+                    <a href="#">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div class="navitcap">Tourist</div>
+                    </a>
+                </div>
+                <div class="navitem navhide">
+                    <a href="#">
+                        <i class="fa-solid fa-globe"></i>
+                        <div class="navitcap">Regions</div>
+                    </a>
+                </div>
+                <div class="navitem navhide" id="Transpos">
+                    <div>
+                        <i class="fa-solid fa-bus"></i>
+                        <div class="navitcap">Transpos</div>
+                    </div>
+                    <a href="#" class="multicon multicontran hide" id="rmulticon1">
+                        <div>Car</div>
+                    </a>
+                    <a href="#" class="multicon multicontran hide" id="rmulticon3">
+                        <div>Bus</div>
+                    </a>
+                    <a href="#" class="multicon multicontran hide" id="rmulticon5">
+                        <div>Airport</div>
+                    </a>
+                </div>
+                <div class="navitem navhide">
+                    <a href="#">
+                        <i class="fa-brands fa-squarespace"></i>
+                        <div class="navitcap">Blog</div>
+                    </a>
+                </div>
+                <a href="#" class="navuser navhide"><i class="fa fa-user"></i></a>
             </div>
         </div>
     </div>
-    <script src="Home-nav.js"></script>
+    <div id="banner">
+        <div class="inf">
+            <div class="text">
+                <div class="name" id="name">I am Long</div>
+                <div class="career">Web Developer</div>
+                <div class="career">UX Designer</div>
+            </div>
+            <div class="img"><img src="Dreamer.png" alt=""></div>
+            <div class="bio">I break down compex users experinece problems to create intergritly focussed solutions that
+                connect billions of people</div>
+            <div class="contact">
+                <div class="icon">
+                    <div><a href="https://github.com/Arisu171"><img src="Git.png"></a></div>
+                    <div><a href="https://www.facebook.com/long.Des171"><img src="Facebook.png"></a></div>
+                    <div><a
+                            href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSGLdhTRxPPSvgvlKchdxwjgcrRqDZpJBqszLlkTvtJwgGmXmMXRwmVPltznwpjplWsXTWJF"><img
+                                src="GMail.png"></a></div>
+                </div>
+                <div class="linkto"><a href="https://arisu171.github.io/Long.D.Shine/Total-Tool.html">My Projects</a>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div class="about">
+            <div class="title"></div>
+            <div class="content">
+                <div class="myself">
+                    <div class="myname"><span class="label">My name is</span><span class="text">Nguyễn Bảo Long</span>
+                    </div>
+                    <div class="myage"><span class="label">I am</span><span class="text">19 Years old</span></div>
+                    <div class="mycareer"><span class="label">I am studying and working in the field of</span><span
+                            class="text">Information Technology</span></div>
+                    <div class="myhobbie"><span class="label">My hobbies are</span>
+                        <div class="hobbie">Puzzle solving</div>
+                        <div class="hobbie">Playing Game</div>
+                        <div class="hobbie">Listening to Music</div>
+                        <div class="hobbie">Playing chess</div>
+                    </div>
+                </div>
+                <div class="aboutme"></div>
+            </div>
+        </div>
+    </div>
     <script src="Home.js"></script>
+    <script src="Home-banner.js"></script>
+    <script src="Home-nav.js"></script>
 </body>
 
 </html>
