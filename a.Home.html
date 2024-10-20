@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="a.Home.css">
     <link rel="stylesheet" href="a.Home-nav.css">
     <link rel="stylesheet" href="a.Home-banner.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="font-awesome-6.6.0-pro-full-main/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Long.D.Shine</title>
 </head>
 
@@ -20,11 +33,11 @@
         <div class="navbar">
             <div class="navleft"><a href="#bannerimg1"></a></div>
             <div class="navright" id="navright">
-                <a href="#" class="navtitle navcurrent" id="navbarHome">Home</a>
-                <a href="#" class="navtitle" id="navbarAbout">About Us</a>
-                <a href="#" class="navtitle" id="navbarSkill">Skills</a>
-                <a href="#" class="navtitle" id="navbarProject">Projects</a>
-                <a href="#" class="navtitle" id="navbarContact">Contact Us</a>
+                <a href="#banner" class="navtitle navcurrent" id="navbarHome">Home</a>
+                <a href="#about" class="navtitle" id="navbarAbout">About Us</a>
+                <a href="#skill" class="navtitle" id="navbarSkill">Skills</a>
+                <a href="#project" class="navtitle" id="navbarProject">Projects</a>
+                <a href="#contact" class="navtitle" id="navbarContact">Contact Us</a>
             </div>
             <div class="navbutton navradius navhide hide" id="navbutt">
                 <div class="navicon navhide" id="navicon" onclick="shownav()"><i class="fa-solid fa-bars"></i></div>
@@ -35,11 +48,12 @@
                     </a>
                 </div>
                 <div class="navitem navhide" id="aboutbut">
-                    <div>
+                    <a href="#about">
                         <i class="fa-duotone fa-solid fa-user"></i>
                         <div class="navitcap">About</div>
-                    </div>
-                    <!-- <a href="#" class="multicon multiconpage hide" id="rmulticon0">
+                    </a>
+                    <!-- 
+                    <a href="#" class="multicon multiconpage hide" id="rmulticon0">
                         <div>About</div>
                     </a>
                     <a href="#" class="multicon multiconpage hide" id="rmulticon2">
@@ -50,26 +64,28 @@
                     </a>
                     <a href="#" class="multicon multiconpage hide" id="rmulticon6">
                         <div>Dests</div>
-                    </a> -->
+                    </a>
+                     -->
                 </div>
                 <div class="navitem navhide" id="skillbut">
-                    <a href="#">
+                    <a href="#skill">
                         <i class="fa-duotone fa-solid fa-code"></i>
                         <div class="navitcap">Skills</div>
                     </a>
                 </div>
-                <div class="navitem navhide" id="projectsbut">
-                    <a href="#">
+                <div class="navitem navhide" id="projectbut">
+                    <a href="#project">
                         <i class="fa-duotone fa-solid fa-code-branch"></i>
                         <div class="navitcap">Projects</div>
                     </a>
                 </div>
                 <div class="navitem navhide" id="contactbut">
-                    <div>
+                    <a href="#contact">
                         <i class="fa-duotone fa-solid fa-id-card"></i>
                         <div class="navitcap">Contact</div>
-                    </div>
-                    <!-- <a href="#" class="multicon multicontran hide" id="rmulticon1">
+                    </a>
+                    <!--                     
+                    <a href="#" class="multicon multicontran hide" id="rmulticon1">
                         <div>Car</div>
                     </a>
                     <a href="#" class="multicon multicontran hide" id="rmulticon3">
@@ -92,40 +108,45 @@
             <div class="img"><img src="Dreamer.png" alt=""></div>
             <div class="bio">I break down compex users experinece problems to create intergritly focussed solutions that
                 connect billions of people</div>
-            <div class="contact">
+            <div class="link">
                 <div class="icon">
-                    <div><a href="https://github.com/Arisu171"><img src="Git.png"></a></div>
-                    <div><a href="https://www.facebook.com/long.Des171"><img src="Facebook.png"></a></div>
-                    <div><a
-                            href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSGLdhTRxPPSvgvlKchdxwjgcrRqDZpJBqszLlkTvtJwgGmXmMXRwmVPltznwpjplWsXTWJF"><img
-                                src="GMail.png"></a></div>
+                    <div><a href="https://github.com/Arisu171" target="_blank"><img src="Git.png"></a></div>
+                    <div><a href="https://www.facebook.com/long.Des171" target="_blank"><img src="Facebook.png"></a>
+                    </div>
+                    <div><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSGLdhTRxPPSvgvlKchdxwjgcrRqDZpJBqszLlkTvtJwgGmXmMXRwmVPltznwpjplWsXTWJF"
+                            target="_blank"><img src="GMail.png">
+                        </a>
+                    </div>
                 </div>
-                <div class="linkto"><a href="https://arisu171.github.io/Long.D.Shine/Total-Tool.html">My Projects</a>
+                <div class="linkto">
+                    <a href="https://arisu171.github.io/Long.D.Shine/Total-Tool.html" target="_blank">My Projects</a>
                 </div>
                 <br><br><br>
             </div>
         </div>
     </div>
     <div id="body">
+        <!-- <div class="space" id="about"></div>
         <div class="about">
-            <div class="title"></div>
+            <div class="titleback"></div>
+            <div class="title">ABOUT US</div>
             <div class="content">
-                <div class="myself">
-                    <div class="myname"><span class="label">My name is</span><span class="text">Nguyễn Bảo Long</span>
-                    </div>
-                    <div class="myage"><span class="label">I am</span><span class="text">19 Years old</span></div>
-                    <div class="mycareer"><span class="label">I am studying and working in the field of</span><span
-                            class="text">Information Technology</span></div>
-                    <div class="myhobbie"><span class="label">My hobbies are</span>
-                        <div class="hobbie">Puzzle solving</div>
-                        <div class="hobbie">Playing Game</div>
-                        <div class="hobbie">Listening to Music</div>
-                        <div class="hobbie">Playing chess</div>
-                    </div>
-                </div>
-                <div class="aboutme"></div>
+                <p class="bodytext">Hello! My name is Nguyễn Bảo Long</p>
+                <p class="bodytext">I am a front-end developer, currently pursuing a degree in Information Technology at
+                    Hanoi Metropolitan University. I have a deep passion for coding, particularly in software
+                    development and algorithmic problem-solving.</p>
             </div>
-        </div>
+            <div class="content">I am actively seeking a conducive work environment that encourages collaboration,
+                creativity, and continuous learning, allowing me to contribute effectively to projects. My goal is to
+                foster personal development by taking on challenging tasks, improving my technical skills, and enhancing
+                my problem-solving abilities. Additionally, I aim to achieve a promotion by demonstrating leadership
+                qualities, delivering high-quality results, and consistently adding value to the team. Ultimately, I
+                aspire to secure a high income that reflects my skills, dedication, and the positive impact I bring to
+                the organization, providing me with the financial stability to pursue further professional growth.
+            </div>
+            <div class="content"></div>
+            <div class="content"></div>
+        </div> -->
     </div>
     <script src="a.Home.js"></script>
     <script src="a.Home-banner.js"></script>

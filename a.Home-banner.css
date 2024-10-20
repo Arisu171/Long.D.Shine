@@ -75,7 +75,7 @@
     line-height: 1.5;
 }
 
-.contact {
+.link {
     width: 33vw;
     display: grid;
     grid-template-columns: repeat(1, 2fr);
