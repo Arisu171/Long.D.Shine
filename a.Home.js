@@ -1,84 +1,141 @@
-const skills = document.querySelectorAll('.skill');
-const skillsSection = document.querySelector("#skills");
-const projects = document.querySelectorAll('.project');
-const portfolioSection = document.querySelector("#portfolio");
-skills.forEach(skill => skill.classList.add("offscreen"));
-projects.forEach(proj => proj.classList.add("offscreen"));
+const info = document.querySelectorAll('.content');
+const infotitle = document.querySelector("#aboutme");
+const skill = document.querySelectorAll('.skill');
+const skilltitle = document.querySelector("#myskill");
+const project = document.querySelectorAll('.project');
+const projecttitle = document.querySelector("#myproj");
+const contact = document.querySelectorAll('.cusinfo');
+const contacttitle = document.querySelector("#contactus");
 
+info.forEach(info => info.classList.add("offscreen"));
+skill.forEach(skill => skill.classList.add("offscreen"));
+project.forEach(project => project.classList.add("offscreen"));
+contact.forEach(contact => contact.classList.add("offscreen"));
+infotitle.classList.add("offscreen");
+
+const observerInfo = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            info.forEach(item => {
+                item.classList.remove("offscreen");
+                item.classList.add("visible");
+            });
+            infotitle.classList.remove("offscreen");
+            infotitle.classList.add("visible");
+        } else {
+            info.forEach(item => {
+                item.classList.remove("visible");
+                item.classList.add("offscreen");
+            });
+            infotitle.classList.remove("visible");
+            infotitle.classList.add("offscreen");
+        }
+    });
+}, {
+    threshold: 0.3
+});
 
 const observerSkills = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            skills.forEach(skill => {
-                skill.classList.remove("offscreen");
-                skill.classList.add("visible");
+            skill.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.remove("offscreen");
+                    item.classList.add("visible");
+                }, index * 30);
             });
         } else {
-            const viewportHeight = window.innerHeight;
-            const sectionRect = skillsSection.getBoundingClientRect();
-
-            if (sectionRect.top < viewportHeight / 4 || sectionRect.bottom > viewportHeight) {
-                skills.forEach(skill => {
-                    skill.classList.remove("visible");
-                    skill.classList.add("offscreen");
-                });
-            }
+            skill.forEach(item => {
+                item.classList.remove("visible");
+                item.classList.add("offscreen");
+            });
         }
     });
 }, {
     threshold: 0.3
 });
 
-const observerPortfolio = new IntersectionObserver((entries) => {
+const observerProject = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            projects.forEach(proj => {
-                proj.classList.remove("offscreen");
-                proj.classList.add("visible");
+            project.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.remove("offscreen");
+                    item.classList.add("visible");
+                }, index * 50);
             });
         } else {
-            const viewportHeight = window.innerHeight;
-            const sectionRect = portfolioSection.getBoundingClientRect();
-
-            if (sectionRect.top < viewportHeight / 4 || sectionRect.bottom > viewportHeight) {
-                projects.forEach(proj => {
-                    proj.classList.remove("visible");
-                    proj.classList.add("offscreen");
-                });
-            }
+            project.forEach(item => {
+                item.classList.remove("visible");
+                item.classList.add("offscreen");
+            });
         }
     });
 }, {
     threshold: 0.3
 });
 
-
-observerSkills.observe(skillsSection);
-observerPortfolio.observe(portfolioSection);
-
-const contactElements = document.querySelectorAll("#contact form input, #contact form textarea, #contact form button");
-const contactSection = document.querySelector("#contact");
-contactElements.forEach(el => {
-    el.classList.add("offscreen");
-});
 const observerContact = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            contactElements.forEach((el, index) => {
+            contact.forEach((item, index) => {
                 setTimeout(() => {
-                    el.classList.add("visible");
-                    el.classList.remove("offscreen");
+                    item.classList.remove("offscreen");
+                    item.classList.add("visible");
                 }, index * 150);
             });
         } else {
-            contactElements.forEach(el => {
-                el.classList.remove("visible");
-                el.classList.add("offscreen");
+            contact.forEach(item => {
+                item.classList.remove("visible");
+                item.classList.add("offscreen");
             });
         }
     });
 }, {
     threshold: 0.3
 });
-observerContact.observe(contactSection);
+
+observerInfo.observe(infotitle);
+observerSkills.observe(skilltitle);
+observerProject.observe(projecttitle);
+observerContact.observe(contacttitle);
+
+
+function sendmes() {
+    document.getElementById('name-error').innerText = '';
+    document.getElementById('email-error').innerText = '';
+    document.getElementById('phone-error').innerText = '';
+
+    const name = document.getElementById('cusinfo1').value.trim();
+    const email = document.getElementById('cusinfo2').value.trim();
+    const phone = document.getElementById('cusinfo3').value.trim();
+
+    let isValid = true;
+
+    if (!name) {
+        document.getElementById('name-error').innerText = 'Name cannot be empty.';
+        isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        document.getElementById('email-error').innerText = 'Email cannot be empty.';
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById('email-error').innerText = 'Invalid email format.';
+        isValid = false;
+    }
+
+    if (!phone) {
+        document.getElementById('phone-error').innerText = 'Phone number cannot be empty.';
+        isValid = false;
+    } else if (phone.length < 10) {
+        document.getElementById('phone-error').innerText = 'Phone number must be at least 10 digits.';
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Message sent successfully!');
+    }
+}
 
