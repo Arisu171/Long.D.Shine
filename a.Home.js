@@ -82,7 +82,7 @@ const observerContact = new IntersectionObserver((entries) => {
                 setTimeout(() => {
                     item.classList.remove("offscreen");
                     item.classList.add("visible");
-                }, index * 150);
+                }, index * 100);
             });
         } else {
             contact.forEach(item => {

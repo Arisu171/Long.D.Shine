@@ -35,7 +35,7 @@
 
 .about .contentzone {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: rgb(24, 24, 24);
     border-radius: 2vw;
     box-shadow: 0 0 1vw #6b11fa;
@@ -196,7 +196,7 @@
 
 .skills .contentzone {
     display: grid;
-    grid-template-columns: repeat(3, 4fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 88vw;
     text-align: center;
     gap: 2vw;
@@ -356,7 +356,7 @@
     display: grid;
     align-items: center;
     text-align: center;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5vw;
     transition: all 0.5s ease;
 }
@@ -584,8 +584,16 @@ textarea {
     }
 
     .about .contentzone {
-        scale: 1;
-        margin-top: 3vw;
+        margin-top: 2vw;
+        transform: scale(0.7);
+    }
+
+    .about .contentzone.offscreen {
+        transform: scale(0.7);
+    }
+
+    .about .contentzone.visible {
+        transform: scale(0.95);
     }
 
     .skills .contentzone {
@@ -594,7 +602,7 @@ textarea {
 
 
     .myproject {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 42vw;
     }
 
