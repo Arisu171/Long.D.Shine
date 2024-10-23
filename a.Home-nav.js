@@ -4,8 +4,9 @@ function makeElementDraggable(el) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
     el.onmousedown = dragMouseDown;
-
     el.ontouchstart = dragTouchStart;
+
+    window.addEventListener("resize", updatePositionOnResize);
 
     function dragMouseDown(e) {
         e.preventDefault();
@@ -53,6 +54,10 @@ function makeElementDraggable(el) {
         document.ontouchend = null;
         document.ontouchmove = null;
 
+        updateElementPosition();
+    }
+
+    function updateElementPosition() {
         const currentY = el.offsetTop;
         const windowHeight = window.innerHeight;
         let newY = currentY;
@@ -90,8 +95,11 @@ function makeElementDraggable(el) {
             dragging = false;
         }, 100);
     }
-}
 
+    function updatePositionOnResize() {
+        updateElementPosition();
+    }
+}
 
 function shownav() {
     if (!dragging) {
