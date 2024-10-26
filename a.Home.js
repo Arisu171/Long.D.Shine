@@ -135,6 +135,18 @@ function sendmes() {
     }
 
     if (isValid) {
+        let inputs = document.querySelectorAll("input");
+        let textareas = document.querySelectorAll("textarea");
+        inputs.forEach(input => {
+            if (input.type !== "button" && input.type !== "submit" && input.type !== "reset") {
+                input.value = "";
+            }
+        });
+        textareas.forEach(input => {
+            if (input.type !== "button" && input.type !== "submit" && input.type !== "reset") {
+                input.value = "";
+            }
+        });
         alert('Message sent successfully!');
     }
 }

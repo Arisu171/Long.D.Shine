@@ -153,8 +153,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(0deg, #7a4affa8, #e6c2ff8e);
+	background: linear-gradient(0deg, #6932ffe0, #ba59ff);
 	border-radius: 1vw;
+	opacity: 0.1;
+	transition: opactiy 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(0deg, #6932ffe0, #ba59ff);
 }
 
 .disabled {
