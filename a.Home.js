@@ -59,10 +59,8 @@ const observerProject = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             project.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.remove("offscreen");
-                    item.classList.add("visible");
-                }, index * 50);
+                item.classList.remove("offscreen");
+                item.classList.add("visible");
             });
         } else {
             project.forEach(item => {

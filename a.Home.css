@@ -213,7 +213,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0 -4vw;
     scale: 0.75;
     transition-delay: 0.1s;
-    transition: scale 0.4s ease;
+    transition: scale 0.4s ease, margin 0.4s ease;
 }
 
 .skill {
@@ -381,8 +381,8 @@ input[type=number]::-webkit-outer-spin-button {
     height: 5vw;
     width: 5vw;
     border-radius: 50%;
-    background-color: #ffffffe8;
-    transition: color 0.5s ease, background-color 0.6s ease, transform 1.5s cubic-bezier(.42, 4.3, .50, -1.5);
+    background-color: #ffffff;
+    transition: color 0.5s ease, background-color 0.6s ease, transform 1.5s cubic-bezier(0.68, -0.6, 0.32, 2.3);
     pointer-events: none;
 }
 
@@ -400,7 +400,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 5vw;
     border-radius: 50%;
     transform: scale(0.7) translate(-600vw, 100vh);
-    transition: color 0.5s ease, background-color 0.6s ease, transform 1.5s cubic-bezier(.42, 4.3, .50, -1.5);
+    transition: color 0.5s ease, background-color 0.6s ease, transform 1.5s cubic-bezier(0.68, -0.6, 0.32, 2.3);
 }
 
 .project.visible a,
@@ -515,6 +515,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .contact {
+    position: relative;
     width: 60%;
     margin: auto;
 }
@@ -593,10 +594,12 @@ textarea {
 }
 
 #copyright {
+    bottom: 0;
+    position: sticky;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.342);
     width: 97vw;
-    margin-left: -8vw;
+    margin-left: -24vw;
     padding: 1.5vw;
     font-size: 1.6vw;
     z-index: 50;
@@ -622,13 +625,17 @@ textarea {
     }
 
     .skills .contentzone {
-        scale: 0.85;
+        scale: 0.95;
+        margin-top: 3vw;
+        margin-bottom: 9vw;
     }
-
 
     .myproject {
         grid-template-columns: repeat(2, 1fr);
         width: 42vw;
+        scale: 1.7;
+        margin-top: 15vw;
+        margin-bottom: 17vw;
     }
 
     .none {
