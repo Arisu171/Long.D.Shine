@@ -608,12 +608,40 @@ textarea {
 
 @media (max-width: 768px) {
     .title {
-        font-size: 4vw;
+        font-size: 7vw;
+    }
+
+    .about .contentzone {
+        padding: 7vw;
+        margin: 0 -5vw;
+    }
+
+    .content {
+        padding: 6vw;
+        margin: 1vw;
+        position: relative;
+    }
+
+    .contenttitle {
+        font-size: 5vw;
+        font-family: 'jost';
+        font-weight: 500;
+        color: rgb(220, 176, 255);
+        padding: 1.5vw 1vw;
+    }
+
+    .bodytext {
+        font-size: 3.3vw;
+        line-height: 1.5;
+        text-align: justify;
     }
 
     .about .contentzone {
         margin-top: 2vw;
         transform: scale(0.7);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        transform: scale(0.5);
     }
 
     .about .contentzone.offscreen {
@@ -622,6 +650,27 @@ textarea {
 
     .about .contentzone.visible {
         transform: scale(0.95);
+    }
+
+    .contenttitle.myinfo {
+        font-size: 5vw;
+        padding-bottom: 4vw;
+    }
+
+    .bodytext.myinfo {
+        font-size: 4vw;
+    }
+
+    .content.pasion {
+        padding-bottom: 20vw;
+    }
+
+    .linktomyprofile {
+        bottom: 6vw;
+        right: 6vw;
+        font-size: 3.5vw;
+        padding: 3vw 4vw;
+        border-radius: 3.5vw;
     }
 
     .skills .contentzone {
